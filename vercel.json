@@ -2,7 +2,7 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/Penawaran_Mota_PPT.html" },
+    { "source": "/", "destination": "/index.html" },
     { "source": "/ppt", "destination": "/Penawaran_Mota_PPT.html" },
     { "source": "/v1", "destination": "/Penawaran_Mota_v1.html" },
     { "source": "/prd", "destination": "/PRD_ERP_PAK_ABRAR.html" },
