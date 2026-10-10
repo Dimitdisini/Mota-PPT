@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Penawaran Resmi & Grand Design Sistem ERP MotaApp — Xavortree Technology Partner</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-body: #F8FAFC;
+            --bg-surface: #FFFFFF;
+            --bg-subtle: #F1F5F9;
+            --border-light: #E2E8F0;
+            --border-medium: #CBD5E1;
+            
+            --slate-950: #070B14;
+            --slate-900: #0B1120;
+            --slate-850: #10192D;
+            --slate-800: #1E293B;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            
+            --indigo-600: #4F46E5;
+            --indigo-700: #4338CA;
+            --indigo-50: #EEF2FF;
+            --indigo-100: #E0E7FF;
+            
+            --amber-600: #D97706;
+            --amber-500: #F59E0B;
+            --amber-50: #FFFBEB;
+            
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --emerald-50: #ECFDF5;
+            
+            --rose-600: #E11D48;
+            --rose-50: #FFF1F2;
+            
+            --cyan-600: #0891B2;
+            --cyan-50: #ECFEFF;
+            
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --text-subtle: #64748B;
+            
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+            --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            --shadow-hover: 0 12px 28px -4px rgba(15, 23, 42, 0.12);
+            --shadow-indigo: 0 4px 16px rgba(79, 70, 229, 0.28);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .font-mono, .badge-mono, .price-val, .metric-number, code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Top Sticky Executive Header */
+        .header-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 12px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--slate-900);
+            text-decoration: none;
+        }
+
+        .brand-logo .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--indigo-600), #312E81);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-indigo);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--slate-700);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a:hover {
+            color: var(--indigo-600);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-print {
+            padding: 8px 16px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            color: var(--slate-800);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-print:hover {
+            background: #E2E8F0;
+        }
+
+        .btn-cta {
+            padding: 9px 20px;
+            background: var(--indigo-600);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-indigo);
+            transition: all 0.2s;
+        }
+
+        .btn-cta:hover {
+            background: var(--indigo-700);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 56px 0 40px;
+            background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-body) 100%);
+            border-bottom: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: var(--indigo-50);
+            border: 1px solid var(--indigo-100);
+            border-radius: 100px;
+            color: var(--indigo-600);
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.18;
+            color: var(--slate-950);
+            max-width: 980px;
+            margin-bottom: 18px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--indigo-600) 0%, #312E81 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--slate-600);
+            max-width: 920px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .metric-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 18px 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--indigo-100);
+        }
+
+        .metric-label {
+            font-size: 0.78rem;
+            color: var(--slate-600);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .metric-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--slate-900);
+        }
+
+        .metric-value.highlight-indigo { color: var(--indigo-600); }
+        .metric-value.highlight-emerald { color: var(--emerald-600); }
+
+        .metric-sub {
+            font-size: 0.78rem;
+            color: var(--slate-600);
+            margin-top: 2px;
+        }
+
+        /* Section Layout */
+        .section {
+            padding: 56px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-header {
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .section-tag {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--indigo-600);
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 10px;
+        }
+
+        .section-desc {
+            font-size: 1.02rem;
+            color: var(--slate-600);
+            max-width: 880px;
+            line-height: 1.65;
+        }
+
+        /* Context & Pain Points Grid */
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .pain-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--rose-600);
+        }
+
+        .pain-card.solution-card::before {
+            background: var(--emerald-600);
+        }
+
+        .pain-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .pain-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--rose-50);
+            color: var(--rose-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .solution-card .pain-icon {
+            background: var(--emerald-50);
+            color: var(--emerald-600);
+        }
+
+        .pain-title {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .pain-body {
+            font-size: 0.92rem;
+            color: var(--slate-600);
+            line-height: 1.6;
+        }
+
+        /* Three Core Flows Diagram */
+        .flow-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .flow-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .flow-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 14px;
+        }
+
+        .flow-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+        }
+
+        .flow-icon.blue { background: var(--indigo-50); color: var(--indigo-600); }
+        .flow-icon.amber { background: var(--amber-50); color: var(--amber-600); }
+        .flow-icon.emerald { background: var(--emerald-50); color: var(--emerald-600); }
+
+        .flow-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .flow-subtitle {
+            font-size: 0.75rem;
+            color: var(--slate-600);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .flow-steps {
+            list-style: none;
+            position: relative;
+        }
+
+        .flow-steps li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--slate-700);
+            font-weight: 500;
+        }
+
+        .flow-steps li::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--indigo-600);
+        }
+
+        .flow-steps.amber li::before { background: var(--amber-600); }
+        .flow-steps.emerald li::before { background: var(--emerald-600); }
+
+        .flow-steps li:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 14px;
+            width: 2px;
+            height: calc(100% + 2px);
+            background: var(--border-light);
+        }
+
+        /* Strategic Banner Boxes */
+        .callout-banner {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .callout-banner.indigo { border-color: var(--indigo-600); background: var(--indigo-50); }
+        .callout-banner.emerald { border-color: var(--emerald-600); background: var(--emerald-50); }
+        .callout-banner.cyan { border-color: var(--cyan-600); background: var(--cyan-50); }
+
+        /* Filterable Backlog Table */
+        .filter-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-field {
+            position: relative;
+            min-width: 320px;
+            flex: 1;
+        }
+
+        .search-field i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--slate-600);
+            font-size: 0.9rem;
+        }
+
+        .search-field input {
+            width: 100%;
+            padding: 10px 14px 10px 38px;
+            border: 1px solid var(--border-medium);
+            border-radius: 8px;
+            font-size: 0.88rem;
+            outline: none;
+            background: var(--bg-surface);
+            color: var(--slate-900);
+            transition: border-color 0.2s;
+        }
+
+        .search-field input:focus {
+            border-color: var(--indigo-600);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 7px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            background: var(--bg-surface);
+            color: var(--slate-700);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: var(--bg-subtle);
+            border-color: var(--slate-600);
+        }
+
+        .tab-btn.active {
+            background: var(--slate-900);
+            color: #FFFFFF;
+            border-color: var(--slate-900);
+        }
+
+        .styled-table-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+
+        .styled-table th {
+            background: var(--bg-subtle);
+            color: var(--slate-700);
+            font-weight: 700;
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--border-medium);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .styled-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--slate-800);
+            vertical-align: middle;
+        }
+
+        .styled-table tr:hover td {
+            background: #F8FAFC;
+        }
+
+        .badge-scope {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .badge-scope.core { background: var(--indigo-50); color: var(--indigo-600); border: 1px solid var(--indigo-100); }
+        .badge-scope.ops { background: var(--amber-50); color: var(--amber-600); border: 1px solid #FDE68A; }
+        .badge-scope.fin { background: var(--emerald-50); color: var(--emerald-600); border: 1px solid #A7F3D0; }
+        .badge-scope.must { background: #EEF2FF; color: #4338CA; font-weight: 800; }
+
+        /* Timeline Roadmap (Heatmap + Table Switcher) */
+        .timeline-view-switch {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .view-switch-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            background: var(--bg-surface);
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--slate-700);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .view-switch-btn.active {
+            background: var(--slate-900);
+            color: #FFFFFF;
+            border-color: var(--slate-900);
+        }
+
+        .calendar-heatmap-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+            box-shadow: var(--shadow-card);
+        }
+
+        .heatmap-header-months-24 {
+            display: grid;
+            grid-template-columns: 260px repeat(24, 1fr);
+            gap: 4px;
+            margin-bottom: 10px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            text-align: center;
+        }
+
+        .month-col-head-24 {
+            background: var(--bg-subtle);
+            padding: 6px 1px;
+            border-radius: 4px;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .month-col-head-24.b1-head { background: #E0E7FF; color: #3730A3; }
+        .month-col-head-24.b2-head { background: #FEF3C7; color: #92400E; }
+        .month-col-head-24.b3-head { background: #D1FAE5; color: #065F46; }
+        .month-col-head-24.b4-head { background: #CFFAFE; color: #155E75; }
+
+        .heatmap-grid-row-24 {
+            display: grid;
+            grid-template-columns: 260px repeat(24, 1fr);
+            gap: 4px;
+            margin-bottom: 6px;
+            align-items: center;
+        }
+
+        .heatmap-phase-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 8px;
+        }
+
+        .cell-month-box-24 {
+            height: 26px;
+            border-radius: 4px;
+            background: #E2E8F0;
+            transition: all 0.15s ease;
+        }
+
+        .cell-month-box-24:hover {
+            transform: scale(1.15);
+            z-index: 5;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+        }
+
+        /* Color classes for heatmap cells */
+        .heat-req { background: #6366F1 !important; box-shadow: 0 0 5px rgba(99, 102, 241, 0.4); }
+        .heat-f0 { background: #818CF8 !important; }
+        .heat-f1 { background: #4F46E5 !important; }
+        .heat-f2 { background: #F59E0B !important; }
+        .heat-f3 { background: #D97706 !important; }
+        .heat-f4 { background: #0D9488 !important; }
+        .heat-f5 { background: #10B981 !important; }
+        .heat-f6 { background: #059669 !important; }
+        .heat-f7 { background: #0284C7 !important; }
+        .heat-f8 { background: #2563EB !important; }
+        .heat-qa { background: #EC4899 !important; }
+        .heat-uat { background: #4338CA !important; }
+        .heat-pilot { background: #0891B2 !important; box-shadow: 0 0 6px rgba(8, 145, 178, 0.5); }
+
+        .heatmap-legend {
+            display: flex;
+            gap: 14px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--slate-600);
+            border-top: 1px solid var(--border-light);
+            padding-top: 14px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-box {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+        }
+
+        /* Pricing Card & Comparison */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .pricing-main-card {
+            background: var(--bg-surface);
+            border: 2px solid var(--indigo-600);
+            border-radius: 18px;
+            padding: 36px;
+            box-shadow: 0 10px 30px rgba(79, 70, 229, 0.08);
+            position: relative;
+        }
+
+        .featured-tag {
+            position: absolute;
+            top: -14px;
+            right: 32px;
+            background: linear-gradient(135deg, var(--indigo-600), #312E81);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            box-shadow: var(--shadow-indigo);
+        }
+
+        .price-badge {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--indigo-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .price-hero {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .price-num {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--slate-950);
+            letter-spacing: -0.03em;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: var(--slate-600);
+            font-weight: 500;
+        }
+
+        .price-tax-note {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .cost-breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin-bottom: 24px;
+        }
+
+        .cost-breakdown-table td {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-light);
+            color: var(--slate-700);
+        }
+
+        .cost-breakdown-table td.amount {
+            text-align: right;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .cost-breakdown-table tr.total-row td {
+            border-top: 2px solid var(--slate-900);
+            border-bottom: none;
+            padding-top: 14px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--slate-900);
+        }
+
+        .cost-breakdown-table tr.total-row td.amount {
+            color: var(--indigo-600);
+            font-size: 1.15rem;
+        }
+
+        .term-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .term-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .term-desc {
+            font-size: 0.88rem;
+            color: var(--slate-600);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .termin-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 14px;
+            background: var(--bg-body);
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: border-color 0.2s;
+        }
+
+        .termin-item:hover {
+            border-color: var(--indigo-600);
+        }
+
+        .termin-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--indigo-600);
+            color: white;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .termin-info { flex-grow: 1; }
+
+        .termin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        .termin-name { font-size: 0.88rem; font-weight: 700; color: var(--slate-900); }
+        .termin-val { font-size: 0.92rem; font-weight: 800; color: var(--indigo-600); }
+        .termin-desc { font-size: 0.78rem; color: var(--slate-600); line-height: 1.4; }
+
+        /* Guarantees Grid */
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guarantee-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .guarantee-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--emerald-50);
+            color: var(--emerald-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 14px;
+        }
+
+        .guarantee-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 6px;
+        }
+
+        .guarantee-desc {
+            font-size: 0.86rem;
+            color: var(--slate-600);
+            line-height: 1.6;
+        }
+
+        /* Sign-off Section */
+        .signoff-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 18px;
+            padding: 36px;
+            margin-top: 40px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .signoff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 32px;
+        }
+
+        .sign-col {
+            border: 1px dashed var(--border-medium);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            background: var(--bg-body);
+        }
+
+        .sign-role {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--indigo-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .sign-name-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 36px;
+        }
+
+        .sign-space {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--slate-600);
+            font-style: italic;
+            font-size: 0.85rem;
+        }
+
+        .sign-person {
+            font-weight: 700;
+            color: var(--slate-900);
+            padding-top: 8px;
+            border-top: 1px solid var(--slate-700);
+            display: inline-block;
+            min-width: 220px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 36px 0;
+            background: var(--slate-950);
+            color: var(--slate-600);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--slate-800);
+        }
+
+        .footer-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .hero-title { font-size: 2.1rem; }
+            .hero-metrics, .flow-container, .pricing-grid, .guarantee-grid, .signoff-grid { grid-template-columns: 1fr; }
+            .pain-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Executive Sticky Header -->
+    <header class="header-nav">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand-logo">
+                <div class="logo-icon"><i class="fa-solid fa-shirt"></i></div>
+                <span>MotaApp <span style="font-weight: 400; color: var(--slate-600); font-size: 0.95rem;">| Enterprise ERP</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#masalah"><i class="fa-solid fa-triangle-exclamation"></i> Tantangan</a></li>
+                <li><a href="#alur"><i class="fa-solid fa-diagram-project"></i> 3 Alur Utama</a></li>
+                <li><a href="#backlogs"><i class="fa-solid fa-list-check"></i> Rincian Fitur</a></li>
+                <li><a href="#timeline"><i class="fa-solid fa-calendar-days"></i> Timeline &amp; Heatmap</a></li>
+                <li><a href="#biaya"><i class="fa-solid fa-file-invoice-dollar"></i> Biaya &amp; Termin</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-print" onclick="window.print()"><i class="fa-solid fa-print"></i> Cetak / PDF</button>
+                <a href="#biaya" class="btn-cta"><i class="fa-solid fa-handshake"></i> Lihat Penawaran</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-shield-halved"></i> DOKUMEN PENAWARAN RESMI & SPESIFIKASI TEKNIS — REF: PRD-MOTA-2026-V1
+            </div>
+            <h1 class="hero-title">
+                Sistem Terpadu ERP &amp; POS MotaApp:<br>
+                <span>Konveksi, Gudang, Ritel Tanah Abang &amp; Otomasi Keuangan</span>
+            </h1>
+            <p class="hero-desc">
+                Dirancang khusus untuk menyatukan ekosistem usaha <strong>Pak Abrar</strong> yang terfragmentasi (web lama monolitik, Excel manual, nota kertas). Menghubungkan secara otomatis alur pengadaan bahan baku, stasiun konveksi, pergudangan kain, kasir grosir/retail, hingga pembukuan laba rugi instan tanpa input ganda.
+            </p>
+
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-clock"></i> Durasi Pengerjaan</div>
+                    <div class="metric-value font-mono highlight-indigo">120 Mandays</div>
+                    <div class="metric-sub">6 Bulan (24 Minggu Efektif)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-tag"></i> Nilai Investasi Turnkey</div>
+                    <div class="metric-value font-mono highlight-indigo">Rp 49,0 Jt</div>
+                    <div class="metric-sub">Base Project Value All-In</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-wallet"></i> Skema Pembayaran</div>
+                    <div class="metric-value font-mono highlight-emerald">5 Termin</div>
+                    <div class="metric-sub">Berbasis BAST &amp; Milestone Kerja</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-code"></i> Hak Intelektual (IP)</div>
+                    <div class="metric-value highlight-indigo">100% Milik Klien</div>
+                    <div class="metric-sub">Full Source Code, Tanpa Royalti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Context & Pain Points -->
+    <section class="section" id="masalah">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Memahami Realita Lapangan</span>
+                <h2 class="section-title">Tantangan Bisnis Saat Ini &amp; Solusi Sistem Baru</h2>
+                <p class="section-desc">
+                    Toko di Tanah Abang menghadapi perubahan pola belanja yang menuntut perputaran barang cepat dan efisiensi sewa toko. Sistem lama yang berusia 5 tahun sudah tidak mampu mengimbangi kompleksitas karena arsitektur monolitik tanpa API dan pencatatan manual yang rawan selisih.
+                </p>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-file-excel"></i></div>
+                        <div class="pain-title">Data Tercecer &amp; Selisih Stok Manual</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Kondisi Saat Ini:</strong>
+                        Pencatatan stok dan closing kasir terpecah antara aplikasi Android terpisah, web lama, dan file Excel berantakan. Karyawan sering salah rekap, stok opname tidak klop, dan angka nol hilang satu bisa mengacaukan pembukuan puluhan juta rupiah.
+                    </div>
+                </div>
+
+                <div class="pain-card solution-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div class="pain-title">Database Bersih &amp; Kasir Web Terpusat</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Solusi MotaApp Baru:</strong>
+                        Seluruh transaksi kasir grosir/retail, gudang, dan konveksi tersambung langsung ke satu database PostgreSQL terpusat melalui antarmuka web modern yang responsif. Stok berkurang instan dan tercatat real-time tanpa delay sinkronisasi.
+                    </div>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <div class="pain-title">Ketiadaan HPP Akurat &amp; Laba Buta</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Kondisi Saat Ini:</strong>
+                        Sistem lama mengunci input modal pada barang luar (*eksternal*). HPP tidak tercatat jelas sehingga Pak Abrar tidak bisa mengetahui margin laba riil toko per artikel dan laporan neraca/keuangan sama sekali tidak bisa terbentuk.
+                    </div>
+                </div>
+
+                <div class="pain-card solution-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div class="pain-title">Prinsip 1 Artikel = 1 HPP Flat Otomatis</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Solusi MotaApp Baru:</strong>
+                        Diterapkan formula baku: <strong>1 Artikel = 1 HPP Flat</strong> (gabungan bahan + ongkos jahit internal atau harga beli luar). Gudang mendistribusikan ke toko berbasis harga modal; selisih harga jual di toko otomatis tercatat sebagai profit bersih toko.
+                    </div>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-scissors"></i></div>
+                        <div class="pain-title">PO Nyangkut Tanpa Jejak di Konveksi</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Kondisi Saat Ini:</strong>
+                        Saat PO tertunda berminggu-minggu, pemilik tidak tahu barang sedang tertahan di penjahit mana, apakah sedang dipotong, di-steam, atau sudah finishing. Terjadi saling lempar tanggung jawab di lapangan.
+                    </div>
+                </div>
+
+                <div class="pain-card solution-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-route"></i></div>
+                        <div class="pain-title">Pelacak 4 Stasiun Konveksi Real-Time</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Solusi MotaApp Baru:</strong>
+                        Tracking kuantitas berjenjang: <strong>Potong &rarr; Jahit &rarr; Steam &rarr; Finishing/QC</strong>. Jika barang tertahan melebihi batas waktu toleransi di salah satu stasiun, sistem otomatis memberi tanda merah (*alert*) di dashboard pemilik.
+                    </div>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                        <div class="pain-title">Rekonsiliasi Transfer Bank Melelahkan</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Kondisi Saat Ini:</strong>
+                        Pembeli toko transfer manual, kasir mengecek foto mutasi struk satu per satu. Biaya EDC bank mahal dan rawan terjadi manipulasi bukti transfer fiktif dari pelanggan.
+                    </div>
+                </div>
+
+                <div class="pain-card solution-card">
+                    <div class="pain-header">
+                        <div class="pain-icon"><i class="fa-solid fa-qrcode"></i></div>
+                        <div class="pain-title">Integrasi Pembayaran Digital (EDC &amp; QRIS)</div>
+                    </div>
+                    <div class="pain-body">
+                        <strong>Solusi MotaApp Baru:</strong>
+                        Kasir langsung terintegrasi dengan Payment Gateway QRIS Dinamis dan EDC modern. Status pembayaran langsung terverifikasi lunas tanpa manual cek mutasi, dengan pencatatan terpisah kas tunai vs nontunai.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Core Flows -->
+    <section class="section" id="alur">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Arsitektur Fondasi</span>
+                <h2 class="section-title">Tiga Alur Terpadu (Three Core Flows)</h2>
+                <p class="section-desc">
+                    Seluruh modul MotaApp diikat oleh 3 alur data yang saling mengunci secara otomatis. Tidak ada transaksi fisik yang bergerak tanpa dokumen legal, dan tidak ada dokumen yang terbit tanpa pencatatan nilai uang di neraca.
+                </p>
+            </div>
+
+            <div class="flow-container">
+                <div class="flow-box">
+                    <div class="flow-header">
+                        <div class="flow-icon blue"><i class="fa-solid fa-file-signature"></i></div>
+                        <div>
+                            <div class="flow-title">1. Document Flow</div>
+                            <div class="flow-subtitle">Alur Legal &amp; Otorisasi</div>
+                        </div>
+                    </div>
+                    <ul class="flow-steps">
+                        <li><strong>Purchase Request (PR):</strong> Gudang buat usulan bahan/barang.</li>
+                        <li><strong>Approval Owner/Finance:</strong> Pak Abrar setujui anggaran sebelum PO jalan.</li>
+                        <li><strong>Purchase Order (PO):</strong> Terbit resmi ke supplier kain/konveksi.</li>
+                        <li><strong>Surat Jalan / Inbound:</strong> Gudang verifikasi fisik sesuai PO.</li>
+                        <li><strong>Invoice Distribusi Toko:</strong> Toko terima barang sebagai hutang ke gudang.</li>
+                        <li><strong>Struk Penjualan &amp; Kuitansi:</strong> Bukti bayar resmi ke pelanggan.</li>
+                    </ul>
+                </div>
+
+                <div class="flow-box">
+                    <div class="flow-header">
+                        <div class="flow-icon amber"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <div>
+                            <div class="flow-title">2. Quantity Flow</div>
+                            <div class="flow-subtitle">Alur Fisik Barang</div>
+                        </div>
+                    </div>
+                    <ul class="flow-steps amber">
+                        <li><strong>Bahan Masuk Gudang:</strong> Scan roll/yard kain bahan dasar.</li>
+                        <li><strong>Potong (Cutting):</strong> Bahan dipotong, input jumlah pisis hasil.</li>
+                        <li><strong>Jahit (Sewing):</strong> Dikerjakan konveksi mitra binaan.</li>
+                        <li><strong>Steam &amp; Finishing/QC:</strong> Pengecekan cacat dan kerapian.</li>
+                        <li><strong>Gudang Barang Jadi:</strong> Masuk stok ber-barcode dan HPP flat.</li>
+                        <li><strong>Toko Grosir/Retail:</strong> Dijual per seri/bundel atau scan satuan.</li>
+                    </ul>
+                </div>
+
+                <div class="flow-box">
+                    <div class="flow-header">
+                        <div class="flow-icon emerald"><i class="fa-solid fa-chart-line"></i></div>
+                        <div>
+                            <div class="flow-title">3. Value Flow</div>
+                            <div class="flow-subtitle">Alur Keuangan &amp; Neraca</div>
+                        </div>
+                    </div>
+                    <ul class="flow-steps emerald">
+                        <li><strong>Pengeluaran Bahan Baku:</strong> Kas berkurang, persediaan bertambah.</li>
+                        <li><strong>HPP Artikel Flat:</strong> Modal bahan + upah jahit terkunci utuh.</li>
+                        <li><strong>Piutang Gudang ke Toko:</strong> Toko berhutang sebesar nilai modal (HPP).</li>
+                        <li><strong>Omset Penjualan Kasir:</strong> Penerimaan kas tunai &amp; QRIS real-time.</li>
+                        <li><strong>Pelunasan Modal:</strong> Toko setor modal ke gudang, margin jadi laba toko.</li>
+                        <li><strong>Laba Rugi &amp; Neraca:</strong> Otomatis tersaji tanpa repot buat jurnal manual.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope of Work & Interactive Backlog Table (MIRIP GOCEAN) -->
+    <section class="section" id="backlogs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Backlog Kerja Terperinci</span>
+                <h2 class="section-title">Scope of Work &amp; Item Rincian Fitur MotaApp</h2>
+                <p class="section-desc">
+                    Diadaptasi langsung dari spreadsheet <strong>MOTA - Grand Design (Phase 1 Effort Analysis)</strong>. Menampilkan rincian fitur, aktor pelaksana, dan nilai bisnis operasional yang siap dikembangkan:
+                </p>
+            </div>
+
+            <!-- Filter Strip -->
+            <div class="filter-strip">
+                <div class="search-field">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Cari fitur, aktor (Gudang, Kasir, Admin), atau kata kunci..." onkeyup="filterTable()">
+                </div>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" onclick="filterCategory('ALL')">Semua Modul (<span id="totalBadgeCount">65</span>)</button>
+                    <button class="tab-btn" onclick="filterCategory('IAM')">1. IAM &amp; Role</button>
+                    <button class="tab-btn" onclick="filterCategory('MASTER')">2. Master Data</button>
+                    <button class="tab-btn" onclick="filterCategory('PROCUREMENT')">3. PR &amp; PO</button>
+                    <button class="tab-btn" onclick="filterCategory('PRODUKSI')">4. Konveksi</button>
+                    <button class="tab-btn" onclick="filterCategory('GUDANG')">5. Gudang &amp; HPP</button>
+                    <button class="tab-btn" onclick="filterCategory('DISTRIBUSI')">6. Distribusi</button>
+                    <button class="tab-btn" onclick="filterCategory('KASIR')">7. Kasir POS</button>
+                    <button class="tab-btn" onclick="filterCategory('MUTASI')">8. Mutasi Toko</button>
+                    <button class="tab-btn" onclick="filterCategory('FINANCE')">9. Finance</button>
+                    <button class="tab-btn" onclick="filterCategory('DASHBOARD')">10. Dashboard</button>
+                </div>
+                <span id="searchResultCount" class="badge-scope must" style="padding: 6px 12px; font-size: 0.8rem;">Menampilkan 65 Fitur</span>
+            </div>
+
+            <div class="callout-banner indigo">
+                <i class="fa-solid fa-shield-halved" style="font-size: 1.4rem; color: var(--indigo-600); margin-top: 2px;"></i>
+                <div>
+                    <h4 style="color: var(--slate-900); font-weight: 800; font-size: 0.92rem; margin-bottom: 2px;">Standar Kualitas &amp; Kepemilikan 100% Hak Milik Intelektual</h4>
+                    <p style="font-size: 0.84rem; color: var(--slate-600); margin: 0;">
+                        Seluruh fitur di bawah ini dibangun secara terpadu mengacu pada kesepakatan desain: <strong>1 HPP Flat, 4 Warna 1 Artikel, Approval Sebelum PO, dan Kasir Web Modern</strong>. Source code diserahkan penuh kepada Pak Abrar tanpa keterikatan lisensi tahunan vendor.
+                    </p>
+                </div>
+            </div>
+
+            <div class="styled-table-card">
+                <table class="styled-table" id="backlogTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">No</th>
+                            <th style="width: 140px;">Scope / Modul</th>
+                            <th style="width: 220px;">Epic &amp; Fitur</th>
+                            <th style="width: 130px;">Aktor Utama</th>
+                            <th>User Story &amp; Deskripsi Nilai Bisnis</th>
+                            <th style="width: 110px; text-align: center;">Prioritas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Populated via JS with 65+ Backlog Items -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CALENDAR HEATMAP TIMELINE (MIRIP GOCEAN ROADMAP) -->
+    <section class="section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Jadwal &amp; Rencana Eksekusi</span>
+                <h2 class="section-title">Project Schedule &amp; Roadmap (6 Bulan / 24 Minggu Efektif)</h2>
+                <p class="section-desc">
+                    Pemetakan waktu sekuensial terstruktur mulai dari <strong>Bulan 1 (Kick-off &amp; Analisis Kebutuhan)</strong> hingga penyerahan sistem penuh dan pendampingan operasional di <strong>Bulan 6</strong> (Total 120 Mandays kerja efektif):
+                </p>
+            </div>
+
+            <!-- 3 Strategic Callout Banners -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; margin-bottom: 24px;">
+                <div class="callout-banner indigo">
+                    <i class="fa-solid fa-file-signature" style="color: var(--indigo-600); font-size: 1.25rem; margin-top: 2px;"></i>
+                    <div style="font-size: 0.85rem; color: var(--slate-900); line-height: 1.55;">
+                        <strong style="color: var(--indigo-600); display: block; margin-bottom: 2px;">1. Diskusi Kebutuhan (37 Hari Paralel di Awal):</strong>
+                        Penyusunan <em>Functional Document (FD)</em> komprehensif oleh Lead Architect &amp; System Analyst agar koding tepat sasaran dan tidak "ngawang".
+                    </div>
+                </div>
+                <div class="callout-banner cyan">
+                    <i class="fa-solid fa-server" style="color: var(--cyan-600); font-size: 1.25rem; margin-top: 2px;"></i>
+                    <div style="font-size: 0.85rem; color: var(--slate-900); line-height: 1.55;">
+                        <strong style="color: var(--cyan-600); display: block; margin-bottom: 2px;">2. Arsitektur Dual Environment:</strong>
+                        Environment <strong>Staging (Sandbox)</strong> untuk simulasi PO, UAT &amp; mutasi stok toko; serta <strong>Production (Live)</strong> terisolasi tanpa risiko gangguan transaksi.
+                    </div>
+                </div>
+                <div class="callout-banner emerald">
+                    <i class="fa-solid fa-headset" style="color: var(--emerald-600); font-size: 1.25rem; margin-top: 2px;"></i>
+                    <div style="font-size: 0.85rem; color: var(--slate-900); line-height: 1.55;">
+                        <strong style="color: var(--emerald-600); display: block; margin-bottom: 2px;">3. Piloting &amp; Pelatihan Staf (30 Hari):</strong>
+                        Pendampingan operasional langsung di gerai Tanah Abang dan gudang saat kasir mulai menggunakan data transaksi riil.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Switcher: Heatmap 24 Minggu vs Tabel Milestone -->
+            <div class="timeline-view-switch">
+                <button class="view-switch-btn active" id="btnSwitchHeatmap" onclick="switchTimelineView('heatmap')">
+                    <i class="fa-solid fa-calendar-days"></i> Heatmap Calendar (Minggu 1 - 24 / 6 Bulan)
+                </button>
+                <button class="view-switch-btn" id="btnSwitchTable" onclick="switchTimelineView('table')">
+                    <i class="fa-solid fa-list-ul"></i> Tabel Rincian 12 Milestone Utama
+                </button>
+            </div>
+
+            <!-- WIDGET 1: 24 WEEKS HEATMAP ROADMAP -->
+            <div id="heatmapWidget" class="calendar-heatmap-container">
+                <div style="min-width: 1200px;">
+                    <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 14px; color: var(--slate-900); display: flex; justify-content: space-between; align-items: center;">
+                        <span><i class="fa-solid fa-calendar-check" style="color: var(--indigo-600);"></i> ROADMAP STRATEGIS TERPADU: MINGGU 1 s/d MINGGU 24 (6 BULAN EFISIEN)</span>
+                        <span style="font-size: 0.75rem; background: var(--indigo-50); color: var(--indigo-600); padding: 4px 12px; border-radius: 20px; font-weight: 800; border: 1px solid var(--indigo-100);">Total 120 Mandays Turnkey</span>
+                    </div>
+
+                    <div class="heatmap-header-months-24">
+                        <div style="text-align:left; padding-left:4px;">Pilar Modul / Aktivitas Eksekusi</div>
+                        <div class="month-col-head-24 b1-head">M 1</div><div class="month-col-head-24 b1-head">M 2</div><div class="month-col-head-24 b1-head">M 3</div><div class="month-col-head-24 b1-head">M 4</div>
+                        <div class="month-col-head-24 b2-head">M 5</div><div class="month-col-head-24 b2-head">M 6</div><div class="month-col-head-24 b2-head">M 7</div><div class="month-col-head-24 b2-head">M 8</div>
+                        <div class="month-col-head-24 b3-head">M 9</div><div class="month-col-head-24 b3-head">M 10</div><div class="month-col-head-24 b3-head">M 11</div><div class="month-col-head-24 b3-head">M 12</div>
+                        <div class="month-col-head-24 b3-head">M 13</div><div class="month-col-head-24 b3-head">M 14</div><div class="month-col-head-24 b3-head">M 15</div><div class="month-col-head-24 b3-head">M 16</div>
+                        <div class="month-col-head-24 b4-head">M 17</div><div class="month-col-head-24 b4-head">M 18</div><div class="month-col-head-24 b4-head">M 19</div><div class="month-col-head-24 b4-head">M 20</div>
+                        <div class="month-col-head-24 b4-head">M 21</div><div class="month-col-head-24 b4-head">M 22</div><div class="month-col-head-24 b4-head">M 23</div><div class="month-col-head-24 b4-head">M 24</div>
+                    </div>
+
+                    <!-- Row 1: Requirement Phase -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">1. Diskusi Requirement &amp; FD (37 Hari)</div>
+                        <div class="cell-month-box-24 heat-req" title="Minggu 1: Diskusi kebutuhan & review sistem lama"></div>
+                        <div class="cell-month-box-24 heat-req" title="Minggu 2: Mapping master data & alur konveksi"></div>
+                        <div class="cell-month-box-24 heat-req" title="Minggu 3: Blueprint ERD database bersih"></div>
+                        <div class="cell-month-box-24 heat-req" title="Minggu 4: Pengesahan Functional Document (FD)"></div>
+                        <div class="cell-month-box-24 heat-req" title="Minggu 5: Review paralel requirement PO"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 2: F0 Keycloak IAM -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">2. F0: Fondasi &amp; Keycloak IAM (4 Tabel)</div>
+                        <div class="cell-month-box-24 heat-f0" title="Minggu 1: Provisioning server & Keycloak"></div>
+                        <div class="cell-month-box-24 heat-f0" title="Minggu 2: Dynamic RBAC 4 master table"></div>
+                        <div class="cell-month-box-24 heat-f0" title="Minggu 3: Login SSO & Session Management"></div>
+                        <div class="cell-month-box-24 heat-f0" title="Minggu 4: Role mapping Superadmin & Kasir"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 3: F1 Master Data -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">3. F1: Master Data Artikel &amp; Partner</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f1" title="Minggu 3: Master Artikel & 4 warna 1 SKU"></div>
+                        <div class="cell-month-box-24 heat-f1" title="Minggu 4: Supplier kain & konveksi mitra"></div>
+                        <div class="cell-month-box-24 heat-f1" title="Minggu 5: Toko cabang & mapping seri grosir"></div>
+                        <div class="cell-month-box-24 heat-f1" title="Minggu 6: Barcode generator custom label"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 4: F2 Procurement PR/PO -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">4. F2: Procurement PR &amp; Approval PO</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f2" title="Minggu 5: Form Purchase Request gudang"></div>
+                        <div class="cell-month-box-24 heat-f2" title="Minggu 6: Dual Approval Gate Pak Abrar"></div>
+                        <div class="cell-month-box-24 heat-f2" title="Minggu 7: PO Internal vs Eksternal"></div>
+                        <div class="cell-month-box-24 heat-f2" title="Minggu 8: Sorting PO kronologis anti-bug"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 5: F3 Produksi Konveksi -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">5. F3: Tracking 4 Stasiun Konveksi</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f3" title="Minggu 7: Tracking Potong & Jahit SPK"></div>
+                        <div class="cell-month-box-24 heat-f3" title="Minggu 8: Tracking Steam & Finishing/QC"></div>
+                        <div class="cell-month-box-24 heat-f3" title="Minggu 9: Alarm Visual PO Merah (Stuck)"></div>
+                        <div class="cell-month-box-24 heat-f3" title="Minggu 10: Pemisahan barang pecah seri"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 6: F4 Gudang & HPP Flat -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">6. F4: Gudang, 1 HPP Flat &amp; Distribusi</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f4" title="Minggu 9: Inbound penerimaan barang jadi"></div>
+                        <div class="cell-month-box-24 heat-f4" title="Minggu 10: Kotak input 1 HPP Flat aktif"></div>
+                        <div class="cell-month-box-24 heat-f4" title="Minggu 11: Surat jalan distribusi ke toko"></div>
+                        <div class="cell-month-box-24 heat-f4" title="Minggu 12: Invoice modal internal gudang"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 7: F5 Kasir Web POS -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">7. F5: Kasir POS Grosir/Retail &amp; QRIS</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f5" title="Minggu 11: Kasir grosir (seri/pack Tanah Abang)"></div>
+                        <div class="cell-month-box-24 heat-f5" title="Minggu 12: Kasir retail (scan barcode satuan)"></div>
+                        <div class="cell-month-box-24 heat-f5" title="Minggu 13: Integrasi QRIS dinamis & EDC"></div>
+                        <div class="cell-month-box-24 heat-f5" title="Minggu 14: Pencetakan struk nota belanja"></div>
+                        <div class="cell-month-box-24 heat-f5" title="Minggu 15: Rekap closingan kas harian kasir"></div>
+                        <div class="cell-month-box-24 heat-f5" title="Minggu 16: Pengujian beban transaksi kasir"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 8: F6 Mutasi Toko Direct -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">8. F6: Mutasi Stok Antar-Toko Langsung</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f6" title="Minggu 15: Request transfer antar cabang"></div>
+                        <div class="cell-month-box-24 heat-f6" title="Minggu 16: Validasi packing rule toko sumber"></div>
+                        <div class="cell-month-box-24 heat-f6" title="Minggu 17: Eksekusi pengiriman & penerimaan"></div>
+                        <div class="cell-month-box-24 heat-f6" title="Minggu 18: Auto-jurnal mutasi aset cabang"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 9: F7 Finance & SBU -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">9. F7: Finance Auto-Posting &amp; SBU Unit</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f7" title="Minggu 17: Auto-posting transaksi operasional"></div>
+                        <div class="cell-month-box-24 heat-f7" title="Minggu 18: Pelunasan modal toko vs margin SBU"></div>
+                        <div class="cell-month-box-24 heat-f7" title="Minggu 19: Laporan laba rugi & neraca"></div>
+                        <div class="cell-month-box-24 heat-f7" title="Minggu 20: Rekonsiliasi setoran bank"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 10: F8 Executive Dashboard -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">10. F8: Executive Dashboard Satu Layar</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-f8" title="Minggu 19: Dashboard omzet & grafik margin riil"></div>
+                        <div class="cell-month-box-24 heat-f8" title="Minggu 20: Widget stok slow-moving & PO merah"></div>
+                        <div class="cell-month-box-24 heat-f8" title="Minggu 21: Export laporan PDF & Excel resmi"></div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 11: QA & UAT Final -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">11. QA Hardening &amp; UAT Klien (BAST)</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-qa" title="Minggu 20: Security test & validasi kasir"></div>
+                        <div class="cell-month-box-24 heat-qa" title="Minggu 21: Bug fixing & performance audit"></div>
+                        <div class="cell-month-box-24 heat-uat" title="Minggu 22: UAT Klien Pak Abrar di Staging"></div>
+                        <div class="cell-month-box-24 heat-uat" title="Minggu 23: Cut-Off data lama & BAST Final"></div>
+                        <div class="cell-month-box-24"></div>
+                    </div>
+
+                    <!-- Row 12: Piloting & Go-Live -->
+                    <div class="heatmap-grid-row-24">
+                        <div class="heatmap-phase-title">12. Piloting Live Toko Tanah Abang (30d)</div>
+                        <div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div><div class="cell-month-box-24"></div>
+                        <div class="cell-month-box-24 heat-pilot" title="Minggu 22: Training staf kasir & gudang"></div>
+                        <div class="cell-month-box-24 heat-pilot" title="Minggu 23: Pendampingan transaksi riil pertama"></div>
+                        <div class="cell-month-box-24 heat-pilot" title="Minggu 24: Go-Live Resmi 100% & IP Transfer"></div>
+                    </div>
+
+                    <!-- Heatmap Legend -->
+                    <div class="heatmap-legend">
+                        <div class="legend-item"><div class="legend-box heat-req"></div> 1. Req &amp; FD (M1-5)</div>
+                        <div class="legend-item"><div class="legend-box heat-f0"></div> 2. F0 Keycloak (M1-4)</div>
+                        <div class="legend-item"><div class="legend-box heat-f1"></div> 3. F1 Master (M3-6)</div>
+                        <div class="legend-item"><div class="legend-box heat-f2"></div> 4. F2 PR/PO (M5-8)</div>
+                        <div class="legend-item"><div class="legend-box heat-f3"></div> 5. F3 Konveksi (M7-10)</div>
+                        <div class="legend-item"><div class="legend-box heat-f4"></div> 6. F4 HPP Gudang (M9-12)</div>
+                        <div class="legend-item"><div class="legend-box heat-f5"></div> 7. F5 Kasir POS (M11-16)</div>
+                        <div class="legend-item"><div class="legend-box heat-f6"></div> 8. F6 Mutasi Toko (M15-18)</div>
+                        <div class="legend-item"><div class="legend-box heat-f7"></div> 9. F7 Finance (M17-20)</div>
+                        <div class="legend-item"><div class="legend-box heat-f8"></div> 10. F8 Dashboard (M19-21)</div>
+                        <div class="legend-item"><div class="legend-box heat-qa"></div> 11. QA &amp; UAT (M20-23)</div>
+                        <div class="legend-item"><div class="legend-box heat-pilot"></div> 12. Piloting 30d (M22-24)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WIDGET 2: 12 MILESTONES TABLE (SWITCHABLE) -->
+            <div id="tableWidget" style="display: none;">
+                <div class="styled-table-card">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 80px;">Milestone</th>
+                                <th style="width: 220px;">Nama Deliverable &amp; Modul</th>
+                                <th>Output Konkret &amp; Kriteria Penerimaan</th>
+                                <th style="width: 140px;">PIC / Owner</th>
+                                <th style="width: 100px; text-align: center;">Durasi</th>
+                                <th style="width: 120px; text-align: center;">Target Env</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timelineTableBody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Term Payment Options -->
+    <section class="section" id="biaya">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transparansi Anggaran</span>
+                <h2 class="section-title">Struktur Biaya Investasi &amp; Termin Pembayaran</h2>
+                <p class="section-desc">
+                    Mengacu langsung pada formula kalkulasi di spreadsheet <strong>MOTA - Pricelist Details</strong>. Kami memberikan nilai terbaik yang terjangkau bagi Pak Abrar tanpa mengorbankan kualitas arsitektur enterprise.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-main-card">
+                    <div class="featured-tag"><i class="fa-solid fa-crown"></i> Paket Turnkey All-In</div>
+                    <div class="price-badge">TOTAL NILAI PROYEK DEVELOPMENT</div>
+                    <div class="price-hero">
+                        <span class="price-num font-mono">Rp 49.000.000</span>
+                        <span class="price-period">/ Kontrak Penuh</span>
+                    </div>
+                    <div class="price-tax-note">
+                        *Estimasi PPN 11% (jika dibutuhkan Faktur Pajak resmi): <strong>Rp 5.390.000</strong> &rarr; Total Inc. Tax: <strong>Rp 54.390.000,00</strong>
+                    </div>
+
+                    <table class="cost-breakdown-table font-mono">
+                        <tbody>
+                            <tr>
+                                <td>1. Project Manager &amp; Lead Architect (120 Mandays @ Rp 150rb)</td>
+                                <td class="amount">Rp 18.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>2. Fullstack Development &amp; Technical Lead (120 Mandays @ Rp 150rb)</td>
+                                <td class="amount">Rp 18.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>3. Server &amp; Database Setup Fee (Inisiasi Cloud 1x)</td>
+                                <td class="amount">Rp 1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td>4. Service Fee (Agile Sprint, QA Hardening &amp; UAT Guarantees)</td>
+                                <td class="amount">Rp 12.000.000</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>TOTAL BASE VALUE DEVELOPMENT (ALL-IN)</td>
+                                <td class="amount">Rp 49.000.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="background: var(--bg-subtle); padding: 14px 16px; border-radius: 10px; font-size: 0.85rem; color: var(--slate-700);">
+                        <i class="fa-solid fa-server" style="color: var(--indigo-600); margin-right: 6px;"></i>
+                        <strong>Biaya Operasional Cloud (OPEX):</strong> Sewa Cloud VPS + Database terisolasi sebesar <strong>Rp 175.000/bulan</strong> (dapat dibayarkan bulanan atau dialokasikan Rp 4.200.000 untuk 24 bulan penuh).
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title"><i class="fa-solid fa-hand-holding-dollar" style="color: var(--emerald-600);"></i> Skema Termin Ramah Arus Kas</div>
+                    <p class="term-desc">
+                        Kami sangat memahami prioritas kas Pak Abrar. Pembayaran <strong>tidak ditagih sekaligus di depan</strong>, melainkan dipecah ke dalam 5 termin berbasis pencapaian fitur nyata (BAST), sehingga toko Pak Abrar tetap bisa berjualan sambil sistem dibangun.
+                    </p>
+
+                    <div class="termin-item">
+                        <div class="termin-num">T1</div>
+                        <div class="termin-info">
+                            <div class="termin-header">
+                                <span class="termin-name">Termin 1 (25% — DP Kontrak)</span>
+                                <span class="termin-val font-mono">Rp 12.250.000</span>
+                            </div>
+                            <div class="termin-desc">Kick-off pengerjaan, finalisasi FD detail bersama Pak Abrar, setup Keycloak IAM &amp; skema database bersih.</div>
+                        </div>
+                    </div>
+
+                    <div class="termin-item">
+                        <div class="termin-num">T2</div>
+                        <div class="termin-info">
+                            <div class="termin-header">
+                                <span class="termin-name">Termin 2 (25% — Fondasi &amp; PO)</span>
+                                <span class="termin-val font-mono">Rp 12.250.000</span>
+                            </div>
+                            <div class="termin-desc">Penyelesaian Modul 1 &amp; 2 (Master Data Artikel, Supplier, Toko) serta Modul 3 (Procurement PR &amp; Approval PO).</div>
+                        </div>
+                    </div>
+
+                    <div class="termin-item">
+                        <div class="termin-num">T3</div>
+                        <div class="termin-info">
+                            <div class="termin-header">
+                                <span class="termin-name">Termin 3 (25% — Produksi &amp; HPP)</span>
+                                <span class="termin-val font-mono">Rp 12.250.000</span>
+                            </div>
+                            <div class="termin-desc">Penyelesaian Modul 4 (Tracking 4 Stasiun Konveksi) serta Modul 5 &amp; 6 (Gudang, Input 1 HPP Flat &amp; Distribusi Toko).</div>
+                        </div>
+                    </div>
+
+                    <div class="termin-item">
+                        <div class="termin-num">T4</div>
+                        <div class="termin-info">
+                            <div class="termin-header">
+                                <span class="termin-name">Termin 4 (15% — Kasir &amp; Finansial)</span>
+                                <span class="termin-val font-mono">Rp 7.350.000</span>
+                            </div>
+                            <div class="termin-desc">Penyelesaian Modul 7 &amp; 8 (Kasir POS EDC/QRIS, Mutasi Antar Toko) dan Modul 9-10 (Auto-Jurnal Finance &amp; Dashboard).</div>
+                        </div>
+                    </div>
+
+                    <div class="termin-item">
+                        <div class="termin-num">T5</div>
+                        <div class="termin-info">
+                            <div class="termin-header">
+                                <span class="termin-name">Termin 5 (10% — Pelunasan &amp; Go-Live)</span>
+                                <span class="termin-val font-mono">Rp 4.900.000</span>
+                            </div>
+                            <div class="termin-desc">UAT pengujian tuntas, migrasi cut-off data lama, pelatihan staf kasir/gudang, dan serah terima 100% Hak Milik IP.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees & Why Xavortree -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Komitmen Kemitraan</span>
+                <h2 class="section-title">Nilai Tambah &amp; Jaminan untuk Pak Abrar</h2>
+            </div>
+
+            <div class="guarantee-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-code-branch"></i></div>
+                    <div class="guarantee-title">100% Hak Milik Source Code (IP)</div>
+                    <div class="guarantee-desc">
+                        Seluruh repositori kode program dan skema database diserahkan penuh kepada Pak Abrar tanpa royalti, tanpa lisensi sewa tahunan yang mengikat.
+                    </div>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <div class="guarantee-title">Custom Khusus Sesuai Lapangan</div>
+                    <div class="guarantee-desc">
+                        Bukan aplikasi instan jadi-jadian (*SaaS kaku*) yang memaksa Pak Abrar mengubah kebiasaan bisnis. Sistem ini disesuaikan 100% dengan ritme kerja Tanah Abang.
+                    </div>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <div class="guarantee-title">Potensi Kemitraan &amp; White-Label</div>
+                    <div class="guarantee-desc">
+                        Sebagai tokoh di komunitas Tanah Abang, jika rekan-rekan bisnis Pak Abrar tertarik memakai sistem ini di kemudian hari, kita dapat membuka skema bagi hasil/lisensi yang menguntungkan kedua belah pihak.
+                    </div>
+                </div>
+            </div>
+
+            <div class="signoff-box">
+                <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--slate-900); text-align: center; margin-bottom: 6px;">
+                    Lembar Konfirmasi &amp; Persetujuan Proposal
+                </h3>
+                <p style="text-align: center; font-size: 0.88rem; color: var(--slate-600);">
+                    Dengan menyetujui dokumen ini, para pihak sepakat untuk memulai tahapan Kick-Off dan penyusunan Functional Document (FD) detail.
+                </p>
+
+                <div class="signoff-grid">
+                    <div class="sign-col">
+                        <div class="sign-role">PIHAK KLIEN / PEMILIK USAHA</div>
+                        <div class="sign-name-title">MOTAAPP INDONESIA</div>
+                        <div class="sign-space">(Tanda Tangan &amp; Cap Usaha)</div>
+                        <div class="sign-person">PAK ABRAR</div>
+                        <div style="font-size: 0.8rem; color: var(--slate-600); margin-top: 4px;">Business Owner &amp; Principal</div>
+                    </div>
+
+                    <div class="sign-col">
+                        <div class="sign-role">PIHAK PENGEMBANG / MITRA TEKNOLOGI</div>
+                        <div class="sign-name-title">XAVORTREE TECHNOLOGY PARTNER</div>
+                        <div class="sign-space">(Tanda Tangan Digital)</div>
+                        <div class="sign-person">DIMITRI AHMAD S.</div>
+                        <div style="font-size: 0.8rem; color: var(--slate-600); margin-top: 4px;">Lead Partner &amp; Solutions Architect</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-wrapper">
+            <div>
+                <strong>MotaApp Enterprise ERP</strong> &copy; 2026 Xavortree Technology Partner. All Rights Reserved.
+            </div>
+            <div>
+                Confidential Document Prepared Specially for <strong>Pak Abrar (MotaApp)</strong>.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Data Scripts -->
+    <script>
+        // Backlogs Data from Google Sheets & PRD
+        const backlogData = [
+            // IAM
+            { no: 1, scope: "IAM", epic: "User Management", actor: "Admin", story: "Membuka, membuat, mengubah, dan menonaktifkan akun staf dengan hak akses terisolasi.", priority: "Must Have" },
+            { no: 2, scope: "IAM", epic: "Role Management", actor: "Admin", story: "Mendefinisikan peran sistem (Superadmin, Gudang, Produksi, Toko Grosir, Toko Retail, Finance).", priority: "Must Have" },
+            { no: 3, scope: "IAM", epic: "Menu Management", actor: "Admin", story: "Mengatur struktur menu hirarkis (parent-child) dinamis tanpa perlu deploy kode program.", priority: "Must Have" },
+            { no: 4, scope: "IAM", epic: "Privilege & Permission", actor: "Admin", story: "Menentukan privilege granular (View, Create, Read, Update, Delete, Approval) per menu.", priority: "Must Have" },
+            { no: 5, scope: "IAM", epic: "Role-Menu Mapping", actor: "Admin", story: "Tabel relasi dinamis 4 master table (Menu, Role, Privilege, User) untuk filter sidebar otomatis.", priority: "Must Have" },
+            { no: 6, scope: "IAM", epic: "Keycloak Authentication", actor: "Semua User", story: "Login aman SSO berbasis Keycloak dengan token JWT, refresh token, dan session timeout.", priority: "Must Have" },
+
+            // MASTER DATA
+            { no: 7, scope: "MASTER", epic: "Artikel Management", actor: "Admin / Gudang", story: "Pengaturan kode artikel unik, nama, kategori, satuan, dan tipe (Internal/Eksternal). 4 variasi warna diikat jadi 1 artikel.", priority: "Must Have" },
+            { no: 8, scope: "MASTER", epic: "Supplier Management", actor: "Admin", story: "Database penyedia bahan baku kain/aksesoris eksternal untuk pengadaan bahan.", priority: "Must Have" },
+            { no: 9, scope: "MASTER", epic: "Konveksi Management", actor: "Admin", story: "Database mitra penjahit konveksi binaan untuk penugasan SPK potong dan jahit.", priority: "Must Have" },
+            { no: 10, scope: "MASTER", epic: "Toko Management", actor: "Admin", story: "Master cabang toko (Tanah Abang, ritel) lengkap dengan tipe (Grosir/Retail) dan PIC toko.", priority: "Must Have" },
+            { no: 11, scope: "MASTER", epic: "Gudang Management", actor: "Admin", story: "Identitas gudang penyimpanan bahan dan barang jadi (dirancang scalable multi-gudang).", priority: "Must Have" },
+            { no: 12, scope: "MASTER", epic: "Barcode Management", actor: "Gudang", story: "Generator kode barcode per artikel dan pencetakan label thermal siap tempel ke pakaian fisik.", priority: "Must Have" },
+            { no: 13, scope: "MASTER", epic: "Packing Mapping", actor: "Admin", story: "Tabel mapping kuantitas grosir per pack/seri per toko (tiap toko grosir bisa punya isi pack berbeda).", priority: "Must Have" },
+
+            // PROCUREMENT
+            { no: 14, scope: "PROCUREMENT", epic: "Material Planning", actor: "Gudang", story: "Perencanaan estimasi kebutuhan bahan kain berdasarkan target produksi berkala.", priority: "Must Have" },
+            { no: 15, scope: "PROCUREMENT", epic: "Purchase Request (PR)", actor: "Gudang", story: "Pengajuan PR bahan kain dan aksesoris ke manajemen lengkap dengan estimasi biaya.", priority: "Must Have" },
+            { no: 16, scope: "PROCUREMENT", epic: "PR Approval Gate", actor: "Finance / Owner", story: "Persetujuan atau penolakan/revisi PR sebelum uang keluar. Approval mendahului penerbitan PO.", priority: "Must Have" },
+            { no: 17, scope: "PROCUREMENT", epic: "Purchase Order (PO)", actor: "Gudang", story: "Penerbitan PO resmi ke supplier dengan nomor urut kronologis otomatis (memperbaiki bug sorting sistem lama).", priority: "Must Have" },
+            { no: 18, scope: "PROCUREMENT", epic: "Routing PO Internal/Eksternal", actor: "Gudang", story: "PO Internal dialirkan ke jalur konveksi; PO Eksternal langsung dialirkan ke gudang barang jadi.", priority: "Must Have" },
+            { no: 19, scope: "PROCUREMENT", epic: "PO Tracking Progress", actor: "Gudang / Owner", story: "Pemantauan status PO aktif sampai seluruh kuantitas diterima, lalu otomatis closed.", priority: "Must Have" },
+            { no: 20, scope: "PROCUREMENT", epic: "Supplier Delivery Note", actor: "Gudang", story: "Penerimaan pengiriman bahan dari supplier disertai verifikasi fisik surat jalan/nota.", priority: "Must Have" },
+
+            // PRODUKSI
+            { no: 21, scope: "PRODUKSI", epic: "Production Assignment", actor: "Gudang", story: "Penugasan artikel PO Internal ke mitra konveksi tertentu dengan surat perintah kerja (SPK).", priority: "Must Have" },
+            { no: 22, scope: "PRODUKSI", epic: "Tracking Pos Potong", actor: "Produksi", story: "Pencatatan tanggal dan jumlah pisis yang berhasil dipotong dari bahan roll/yard.", priority: "Must Have" },
+            { no: 23, scope: "PRODUKSI", epic: "Tracking Pos Jahit", actor: "Produksi", story: "Pencatatan kuantitas pakaian yang sedang dan telah selesai dijahit oleh konveksi.", priority: "Must Have" },
+            { no: 24, scope: "PRODUKSI", epic: "Tracking Pos Steam", actor: "Produksi", story: "Pencatatan proses setrika uap pakaian jadi sebelum masuk pengecekan akhir.", priority: "Must Have" },
+            { no: 25, scope: "PRODUKSI", epic: "Tracking Finishing & QC", actor: "Produksi", story: "Pengecekan cacat jahitan, pemasangan hangtag, dan pembungkusan plastik seri.", priority: "Must Have" },
+            { no: 26, scope: "PRODUKSI", epic: "Alarm Visual PO Merah", actor: "Owner / Gudang", story: "Peringatan otomatis: jika PO tertahan melebihi batas waktu di pos tertentu, nomor PO berubah merah.", priority: "Must Have" },
+            { no: 27, scope: "PRODUKSI", epic: "Pemisahan Pecah Seri", actor: "Produksi", story: "Sisa pisis ganjil yang tidak bisa dijadikan 1 seri otomatis dialihkan ke toko retail untuk dijual satuan.", priority: "Must Have" },
+
+            // GUDANG & HPP
+            { no: 28, scope: "GUDANG", epic: "Inbound Penerimaan Bahan", actor: "Gudang", story: "Pencatatan bahan masuk (roll/yard) dan penempatan di rak persediaan bahan baku.", priority: "Must Have" },
+            { no: 29, scope: "GUDANG", epic: "Inbound Barang Jadi", actor: "Gudang", story: "Penerimaan hasil konveksi (Internal) atau supplier luar (Eksternal) ke gudang barang jadi.", priority: "Must Have" },
+            { no: 30, scope: "GUDANG", epic: "Aktivasi 1 HPP Flat per Artikel", actor: "Gudang / Admin", story: "Input nilai HPP flat aktif untuk semua artikel. HPP wajib diisi sebelum barang bisa didistribusikan.", priority: "Must Have" },
+            { no: 31, scope: "GUDANG", epic: "Stok Manajemen & Mutasi", actor: "Gudang", story: "Pencatatan persediaan barang transaksional terpisah dari tabel artikel; pelacakan mutasi masuk/keluar.", priority: "Must Have" },
+            { no: 32, scope: "GUDANG", epic: "Stock Opname Fisik", actor: "Gudang", story: "Fitur opname berkala mencocokkan stok fisik vs sistem dengan pencatatan selisih.", priority: "Must Have" },
+            { no: 33, scope: "GUDANG", epic: "Stock Adjustment Berizin", actor: "Gudang / Owner", story: "Penyesuaian selisih stok opname dengan wewenang otorisasi khusus Pak Abrar untuk menol-kan selisih.", priority: "Must Have" },
+
+            // DISTRIBUSI TOKO
+            { no: 34, scope: "DISTRIBUSI", epic: "Perencanaan Distribusi", actor: "Gudang", story: "Alokasi barang jadi yang siap dikirim ke gerai grosir Tanah Abang maupun gerai retail.", priority: "Must Have" },
+            { no: 35, scope: "DISTRIBUSI", epic: "Penerbitan Surat Jalan", actor: "Gudang", story: "Penerbitan invoice keluar/surat jalan distribusi yang otomatis mengurangi stok gudang.", priority: "Must Have" },
+            { no: 36, scope: "DISTRIBUSI", epic: "Penerimaan Barang di Toko", actor: "Toko", story: "Konfirmasi penerimaan barang fisik di toko; stok toko bertambah secara atomic.", priority: "Must Have" },
+            { no: 37, scope: "DISTRIBUSI", epic: "Invoice Modal Hutang Toko", actor: "Toko / Finance", story: "Barang masuk otomatis tercatat sebagai hutang toko ke gudang berdasarkan nilai modal HPP.", priority: "Must Have" },
+
+            // KASIR POS
+            { no: 38, scope: "KASIR", epic: "Web POS Kasir Terpadu", actor: "Kasir Toko", story: "Antarmuka kasir web modern responsif di tablet/laptop menggantikan aplikasi Android lama.", priority: "Must Have" },
+            { no: 39, scope: "KASIR", epic: "Penjualan Grosir (Seri/Pack)", actor: "Toko Grosir", story: "Transaksi grosir Tanah Abang kelipatan pack/seri; stok fisik berkurang akurat per pisis.", priority: "Must Have" },
+            { no: 40, scope: "KASIR", epic: "Penjualan Retail (Scan Barcode)", actor: "Toko Retail", story: "Penjualan satuan cepat dengan scan barcode optik ala kasir minimarket; bebas antrean.", priority: "Must Have" },
+            { no: 41, scope: "KASIR", epic: "Pembayaran QRIS Dinamis", actor: "Kasir", story: "Integrasi QRIS instan (BCA, Mandiri, GoPay, OVO) dengan konfirmasi pembayaran otomatis <5 detik.", priority: "Must Have" },
+            { no: 42, scope: "KASIR", epic: "Pembayaran Mesin EDC", actor: "Kasir", story: "Integrasi terminal kartu debit/kredit EDC dengan rekonsiliasi settlement otomatis.", priority: "Must Have" },
+            { no: 43, scope: "KASIR", epic: "Penerbitan Struk & Nota", actor: "Kasir", story: "Pencetakan nota struk belanja format thermal dan opsi kirim nota PDF via WhatsApp.", priority: "Must Have" },
+            { no: 44, scope: "KASIR", epic: "Rekap Closingan Kas Harian", actor: "Kasir", story: "Hitung kas awal, omzet tunai, QRIS, pengeluaran kasbon operasional, dan uang siap setor.", priority: "Must Have" },
+
+            // MUTASI ANTAR TOKO
+            { no: 45, scope: "MUTASI", epic: "Request Transfer Antar Toko", actor: "Toko Peminta", story: "Toko peminta bisa langsung minta transfer stok ke cabang lain tanpa lewat gudang pusat.", priority: "Must Have" },
+            { no: 46, scope: "MUTASI", epic: "Cek Stok & Validasi Packing", actor: "Toko Sumber", story: "Pengecekan ketersediaan stok cabang sumber dan validasi aturan kelipatan pack grosir.", priority: "Must Have" },
+            { no: 47, scope: "MUTASI", epic: "Approval & Kirim Stok", actor: "Toko Sumber", story: "Persetujuan transfer stok; stok sumber berkurang saat barang diberangkatkan.", priority: "Must Have" },
+            { no: 48, scope: "MUTASI", epic: "Penerimaan Stok Transfer", actor: "Toko Peminta", story: "Toko peminta konfirmasi terima; stok bertambah seketika.", priority: "Must Have" },
+            { no: 49, scope: "MUTASI", epic: "Auto Jurnal Nilai Aset", actor: "Finance", story: "Sistem otomatis mencatat perpindahan nilai aset antar-cabang di neraca keuangan.", priority: "Must Have" },
+
+            // FINANCE & SBU
+            { no: 50, scope: "FINANCE", epic: "Auto-Journaling Transaksi", actor: "Finance", story: "Setiap mutasi barang, pembelian, dan penjualan otomatis membentuk entri jurnal akuntansi.", priority: "Must Have" },
+            { no: 51, scope: "FINANCE", epic: "Pemisahan Margin SBU Toko", actor: "Finance", story: "Toko hanya setor modal HPP ke rekening induk; selisih harga jual murni menjadi laba bersih toko.", priority: "Must Have" },
+            { no: 52, scope: "FINANCE", epic: "Pelunasan Hutang Modal Toko", actor: "Finance", story: "Pencatatan setoran omzet toko untuk memotong saldo hutang modal toko ke gudang.", priority: "Must Have" },
+            { no: 53, scope: "FINANCE", epic: "Rekonsiliasi Kas Toko vs Bank", actor: "Finance", story: "Pencocokan laporan closing kasir toko terhadap mutasi rekening koran induk secara berkala.", priority: "Must Have" },
+            { no: 54, scope: "FINANCE", epic: "Laporan Laba Rugi Otomatis", actor: "Finance / Owner", story: "Laporan rugi laba per toko dan konsolidasi bisnis terbentuk instan dari data transaksi.", priority: "Must Have" },
+            { no: 55, scope: "FINANCE", epic: "Laporan Neraca Aktiva & Pasiva", actor: "Finance / Owner", story: "Penyajian posisi kas, persediaan bahan, persediaan barang jadi, dan hutang/piutang riil.", priority: "Must Have" },
+
+            // DASHBOARD & MONITORING
+            { no: 56, scope: "DASHBOARD", epic: "Executive Dashboard Owner", actor: "Pak Abrar", story: "Layar kendali satu halaman: grafik omzet harian/bulanan, gross profit riil, dan posisi kas.", priority: "Must Have" },
+            { no: 57, scope: "DASHBOARD", epic: "Widget PO Merah (Stuck Alert)", actor: "Owner / Gudang", story: "Tampilan daftar PO konveksi yang terhambat melebihi batas waktu toleransi.", priority: "Must Have" },
+            { no: 58, scope: "DASHBOARD", epic: "Laporan Umur Stok (Slow-Moving)", actor: "Owner / Gudang", story: "Identifikasi artikel atau kain yang menumpuk lama di gudang agar cepat diobral/diproses.", priority: "Must Have" },
+            { no: 59, scope: "DASHBOARD", epic: "Laporan Performa Toko Cabang", actor: "Pak Abrar", story: "Perbandingan omzet dan margin per cabang (Tanah Abang vs gerai ritel).", priority: "Must Have" },
+            { no: 60, scope: "DASHBOARD", epic: "Export Laporan Excel & PDF", actor: "Finance / Owner", story: "Ekspor seluruh laporan pembukuan ke format Excel dan PDF siap audit.", priority: "Must Have" },
+
+            // MIGRASI & CUTOFF
+            { no: 61, scope: "MIGRASI", epic: "Import Master Data Awal", actor: "Admin", story: "Import template Excel master artikel bersih, supplier, dan daftar toko ke sistem baru.", priority: "Must Have" },
+            { no: 62, scope: "MIGRASI", epic: "Input Opening Stock Fisik", actor: "Gudang / Toko", story: "Pencatatan stok fisik hasil opname awal saat sistem baru mulai beroperasi resmi.", priority: "Must Have" },
+            { no: 63, scope: "MIGRASI", epic: "Input Opening Balance Kas", actor: "Finance", story: "Pencatatan saldo kas awal toko dan piutang/hutang berjalan saat cut-off.", priority: "Must Have" },
+            { no: 64, scope: "MIGRASI", epic: "Arsip Laporan Sistem Lama", actor: "Owner / Admin", story: "Penyimpanan data historis 5 tahun sistem lama dalam bentuk arsip laporan read-only.", priority: "Must Have" },
+            { no: 65, scope: "MIGRASI", epic: "Go-Live & Cut-Off Bersih", actor: "Seluruh Tim", story: "Penyelesaian seluruh PO lama di sistem lama, lalu migrasi 100% ke sistem MotaApp baru.", priority: "Must Have" }
+        ];
+
+        // Milestones Data for Switchable Table
+        const milestoneData = [
+            { id: "M01", name: "Diskusi Requirement & Analisis Data Riil", output: "Sinkronisasi kebutuhan data riil Pak Abrar, review nota fisik & aturan seri", pic: "System Analyst & Pak Abrar", days: "37 Hari", env: "Discovery" },
+            { id: "M02", name: "Pengesahan Functional Document (FD)", output: "Dokumen FD lengkap (wireframe kasir, ERD database bersih & business flow)", pic: "Dimitri & Bang Ferry", days: "14 Hari", env: "Dokumentasi" },
+            { id: "M03", name: "Setup Fondasi Teknis & Keycloak IAM SSO", output: "Server VPS siap, Keycloak berjalan, Dynamic RBAC 4 master table aktif", pic: "Tech Lead", days: "15 Hari", env: "Staging" },
+            { id: "M04", name: "Master Data Terpadu & Barcode Engine", output: "CRUD Master Artikel (1 artikel 4 warna), Partner, Toko, & cetak label barcode", pic: "Fullstack Dev", days: "18 Hari", env: "Staging" },
+            { id: "M05", name: "Procurement PR/PO & Dual Approval Gate", output: "Form PR gudang, Approval Pak Abrar, PO Internal vs Eksternal, sorting nomor PO", pic: "Fullstack Dev", days: "20 Hari", env: "Staging" },
+            { id: "M06", name: "Tracking 4 Pos Konveksi & Deteksi Bottleneck", output: "Pelacak Potong-Jahit-Steam-QC, alarm visual PO Merah & pemisahan pecah seri", pic: "Fullstack Dev", days: "22 Hari", env: "Staging" },
+            { id: "M07", name: "Gudang, 1 HPP Flat & Distribusi Toko", output: "Inbound barang jadi, kotak HPP aktif, surat jalan & invoice modal internal", pic: "Fullstack Dev", days: "20 Hari", env: "Staging" },
+            { id: "M08", name: "Kasir Web POS Grosir/Retail & QRIS/EDC", output: "Kasir grosir seri/pack, retail scan barcode satuan, integrasi QRIS & EDC", pic: "Dev & Payment Eng", days: "28 Hari", env: "Staging" },
+            { id: "M09", name: "Mutasi Stok Antar-Toko Langsung", output: "Transfer direct cabang ke cabang, validasi packing rule & auto-jurnal aset", pic: "Fullstack Dev", days: "16 Hari", env: "Staging" },
+            { id: "M10", name: "Finance Auto-Posting & Dashboard Eksekutif", output: "Auto-jurnal transaksi, pemisahan margin SBU toko, laba rugi, dashboard 1 layar", pic: "Dev & Analyst", days: "22 Hari", env: "Staging" },
+            { id: "M11", name: "QA Hardening, UAT Klien & Cut-Off Data", output: "Simulasi transaksi penuh di sandbox, cut-off sistem lama, opening stock & BAST", pic: "QA & Pak Abrar", days: "14 Hari", env: "Staging & Prod" },
+            { id: "M12", name: "Sharing Knowledge & Piloting Live Toko", output: "Training staf kasir/gudang, pendampingan transaksi nyata di Tanah Abang (30 hari)", pic: "Tim Xavortree", days: "30 Hari", env: "Production Live" }
+        ];
+
+        // Populate Table Body
+        function renderTable(items) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            items.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="font-mono text-center">${item.no}</td>
+                    <td><span class="badge-scope ${getScopeBadgeClass(item.scope)}">${item.scope}</span></td>
+                    <td><strong>${item.epic}</strong></td>
+                    <td><span style="font-size: 0.8rem; color: var(--slate-600);"><i class="fa-solid fa-user-tag" style="margin-right:4px;"></i>${item.actor}</span></td>
+                    <td style="font-size: 0.86rem; color: var(--slate-700);">${item.story}</td>
+                    <td style="text-align: center;"><span class="badge-scope must">${item.priority}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+            document.getElementById('searchResultCount').innerText = `Menampilkan ${items.length} dari ${backlogData.length} Fitur`;
+        }
+
+        function getScopeBadgeClass(scope) {
+            if (scope === 'IAM' || scope === 'MASTER') return 'core';
+            if (scope === 'FINANCE' || scope === 'GUDANG') return 'fin';
+            return 'ops';
+        }
+
+        // Filter by Category
+        let currentCat = 'ALL';
+        function filterCategory(cat) {
+            currentCat = cat;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            applyFilters();
+        }
+
+        // Search Input Filter
+        function filterTable() {
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = backlogData.filter(item => {
+                const matchCat = (currentCat === 'ALL') || (item.scope === currentCat);
+                const matchQuery = item.epic.toLowerCase().includes(query) ||
+                                   item.story.toLowerCase().includes(query) ||
+                                   item.actor.toLowerCase().includes(query) ||
+                                   item.scope.toLowerCase().includes(query);
+                return matchCat && matchQuery;
+            });
+            renderTable(filtered);
+        }
+
+        // Timeline Switcher
+        function switchTimelineView(view) {
+            const heatBtn = document.getElementById('btnSwitchHeatmap');
+            const tableBtn = document.getElementById('btnSwitchTable');
+            const heatWidget = document.getElementById('heatmapWidget');
+            const tableWidget = document.getElementById('tableWidget');
+
+            if (view === 'heatmap') {
+                heatBtn.classList.add('active');
+                tableBtn.classList.remove('active');
+                heatWidget.style.display = 'block';
+                tableWidget.style.display = 'none';
+            } else {
+                tableBtn.classList.add('active');
+                heatBtn.classList.remove('active');
+                heatWidget.style.display = 'none';
+                tableWidget.style.display = 'block';
+                renderMilestoneTable();
+            }
+        }
+
+        function renderMilestoneTable() {
+            const tbody = document.getElementById('timelineTableBody');
+            tbody.innerHTML = '';
+            milestoneData.forEach(m => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="font-mono font-bold" style="color: var(--indigo-600);">${m.id}</td>
+                    <td><strong>${m.name}</strong></td>
+                    <td style="font-size: 0.85rem; color: var(--slate-700);">${m.output}</td>
+                    <td><span style="font-size: 0.8rem; color: var(--slate-600);"><i class="fa-solid fa-user-check" style="margin-right:4px;"></i>${m.pic}</span></td>
+                    <td class="font-mono text-center font-bold" style="font-size: 0.82rem;">${m.days}</td>
+                    <td style="text-align: center;"><span class="badge-scope ${m.env === 'Production Live' ? 'fin' : 'core'}">${m.env}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Initial Render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTable(backlogData);
+            document.getElementById('totalBadgeCount').innerText = backlogData.length;
+        });
+    </script>
+</body>
+</html>

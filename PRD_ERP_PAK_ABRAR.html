@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRD ERP PAK ABRAR — Full Scope & Checklist Kebutuhan</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Mermaid.js -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+  </script>
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --success: #16a34a;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 32px 20px;
+    }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .badge-primary { background: rgba(37, 99, 235, 0.25); color: #93c5fd; border: 1px solid #3b82f6; }
+    .badge-warning { background: #fef3c7; color: #b45309; }
+    .badge-success { background: #dcfce7; color: #15803d; }
+    .badge-danger { background: #fee2e2; color: #b91c1c; }
+    h1 { font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
+    .subtitle { color: #94a3b8; font-size: 16px; }
+
+    .grid-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .meta-item { display: flex; flex-direction: column; }
+    .meta-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.5px; }
+    .meta-val { font-size: 14px; font-weight: 600; color: #f8fafc; margin-top: 2px; }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    h2 { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-top: 20px; margin-bottom: 10px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #f1f5f9;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    tr:hover td { background: #f8fafc; }
+
+    .checklist-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .check-card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 18px;
+      background: #fafafa;
+      transition: all 0.2s;
+    }
+    .check-card.danger { border-left-color: var(--danger); }
+    .check-card.warning { border-left-color: var(--warning); }
+    .check-card.success { border-left-color: var(--success); }
+
+    .check-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .check-title { font-size: 15px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    .check-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+    .check-action-box {
+      background: #ffffff;
+      border: 1px dashed #cbd5e1;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 13px;
+    }
+    .check-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .fill-box {
+      display: inline-block;
+      min-width: 140px;
+      border-bottom: 1px solid #94a3b8;
+      color: #0f172a;
+      font-weight: 600;
+      padding: 0 4px;
+    }
+
+    .pill-tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    .diagram-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+      text-align: center;
+      margin: 16px 0;
+    }
+
+    .callout {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header Banner -->
+  <div class="header-banner">
+    <div class="badge badge-primary"><i class="fa-solid fa-file-lines"></i> Product Requirements Document (PRD)</div>
+    <h1>ERP PAK ABRAR — Full Scope Platform</h1>
+    <div class="subtitle">Sistem Terintegrasi Hulu-ke-Hilir: Konveksi, Multi-Gudang, POS Toko (Grosir & Retail), dan Finance Otomatis</div>
+    
+    <div class="grid-meta">
+      <div class="meta-item">
+        <span class="meta-label">Klien / Stakeholder</span>
+        <span class="meta-val">Pak Abrar</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Disusun Oleh</span>
+        <span class="meta-val">Tim Xavortree</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Versi & Status</span>
+        <span class="meta-val">1.0.0 · Draft Bedah Kebutuhan</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Acuan Desain</span>
+        <span class="meta-val">Helikopter View Rev 3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Helikopter View & 3 Flows -->
+  <div class="card">
+    <h2><i class="fa-solid fa-plane-up text-blue-600"></i> 1. Helikopter View & 3 Core Flows</h2>
+    <p>Bisnis berjalan lewat 7 titik utama yang saling terhubung, dikawal oleh mekanisme <em>approval</em> anggaran dan terjurnal otomatis di modul Finance tanpa entri manual ganda:</p>
+    
+    <div class="diagram-box">
+      <div class="mermaid">
+        flowchart LR
+          MD["Master Data"] --> PC["Procurement"]
+          PC --> PRD["Produksi (Konveksi)"]
+          PRD --> GD["Gudang"]
+          GD --> TK["Toko (Grosir / Retail)"]
+          TK --> FN["Finance"]
+          FN --> RP["Reporting"]
+
+          style MD fill:#f8fafc,stroke:#94a3b8,stroke-width:2px
+          style PC fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
+          style PRD fill:#fef3c7,stroke:#d97706,stroke-width:2px
+          style GD fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+          style TK fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
+          style FN fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+          style RP fill:#f1f5f9,stroke:#475569,stroke-width:2px
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 20px;">
+      <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
+        <div style="font-weight: 700; color: #0284c7; margin-bottom: 6px;"><i class="fa-solid fa-file-invoice"></i> 1. Document Flow</div>
+        <p style="font-size: 13px; color: #475569;">Pelacakan status dokumen legal & operasional: <strong>PR &rarr; Approval &rarr; PO &rarr; Nota Terima &rarr; Invoice Toko &rarr; Kuitansi</strong>.</p>
+      </div>
+      <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
+        <div style="font-weight: 700; color: #d97706; margin-bottom: 6px;"><i class="fa-solid fa-boxes-stacked"></i> 2. Quantity Flow</div>
+        <p style="font-size: 13px; color: #475569;">Pelacakan fisik barang per tahap: <strong>Bahan &rarr; Potong &rarr; Jahit &rarr; Steam &rarr; QC &rarr; Gudang &rarr; Toko</strong>.</p>
+      </div>
+      <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
+        <div style="font-weight: 700; color: #16a34a; margin-bottom: 6px;"><i class="fa-solid fa-coins"></i> 3. Value Flow</div>
+        <p style="font-size: 13px; color: #475569;">Perjalanan nilai uang: <strong>Kas/Hutang PO &rarr; 1 HPP Flat &rarr; Hutang Toko Modal &rarr; Laba Penjualan</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keputusan Final -->
+  <div class="card">
+    <h2><i class="fa-solid fa-circle-check text-green-600"></i> 2. Keputusan yang Sudah Final (Fixed)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th width="30%">Keputusan</th>
+          <th>Rasional & Dampak Sistem</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Variasi Warna Tidak Didetailkan</strong></td>
+          <td>4 variasi warna tetap dihitung sebagai 1 artikel saja. Ini menjaga proses stock opname dan POS kasir tetap ringkas dan efisien.</td>
+        </tr>
+        <tr>
+          <td><strong>1 Artikel = 1 HPP Flat</strong></td>
+          <td>HPP tidak dipecah per stasiun kerja konveksi. Satu nilai HPP flat langsung diinput saat barang jadi tiba di gudang sebelum didistribusikan.</td>
+        </tr>
+        <tr>
+          <td><strong>Toko Grosir & Retail Satu Flow</strong></td>
+          <td>Memakai antarmuka kasir yang sama, pembeda hanya pada format penjualan (Grosir per seri/bundel vs Retail satuan scan barcode).</td>
+        </tr>
+        <tr>
+          <td><strong>Mutasi Antar-Toko Langsung</strong></td>
+          <td>Toko peminta langsung request ke toko sumber tanpa transit di gudang, namun perpindahan nilai asetnya otomatis terjurnal di Finance.</td>
+        </tr>
+        <tr>
+          <td><strong>Approval Mendahului PO</strong></td>
+          <td>Purchase Request (PR) dari gudang wajib disetujui Finance & Pak Abrar sebelum PO resmi dapat diterbitkan ke supplier.</td>
+        </tr>
+        <tr>
+          <td><strong>Cut-off Data Lama (Clean DB)</strong></td>
+          <td>Database dibangun ulang bersih. Data lama disimpan terpisah sebagai arsip laporan. Seluruh PO aktif lama diselesaikan sebelum go-live.</td>
+        </tr>
+        <tr>
+          <td><strong>Full Scope Langsung</strong></td>
+          <td>Bukan rilis bertahap (MVP) — seluruh modul dari konveksi hingga finance dibangun langsung secara menyeluruh sesuai instruksi Pak Abrar.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RBAC Matrix -->
+  <div class="card">
+    <h2><i class="fa-solid fa-users-gear text-slate-700"></i> 3. Matriks Hak Akses (Role-Based Access Control)</h2>
+    <p style="font-size: 13px; color: #64748b; margin-bottom: 12px;">Sistem menggunakan IAM Dinamis 4 tabel master (<em>Menu, Role, Privilege, User</em>):</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Modul / Fitur</th>
+          <th>Kode</th>
+          <th>Super Admin (Pak Abrar)</th>
+          <th>Gudang</th>
+          <th>Konveksi</th>
+          <th>Toko</th>
+          <th>Finance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Master Data & IAM</strong></td>
+          <td>F1-A1</td>
+          <td><span class="pill-tag">V, C, U, D</span></td>
+          <td><span class="pill-tag">V, C, U</span></td>
+          <td><span class="pill-tag">V</span></td>
+          <td><span class="pill-tag">V</span></td>
+          <td><span class="pill-tag">V</span></td>
+        </tr>
+        <tr>
+          <td><strong>Purchase Request (PR)</strong></td>
+          <td>F2-A1</td>
+          <td><span class="pill-tag">V, U, App</span></td>
+          <td><span class="pill-tag">V, C, U</span></td>
+          <td>-</td>
+          <td>-</td>
+          <td><span class="pill-tag">V, U, App</span></td>
+        </tr>
+        <tr>
+          <td><strong>Approval PR & PO</strong></td>
+          <td>F2-A2</td>
+          <td><span class="pill-tag">V, C, App</span></td>
+          <td><span class="pill-tag">V</span></td>
+          <td>-</td>
+          <td>-</td>
+          <td><span class="pill-tag">V, C, App</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tracking Konveksi (Potong/Jahit/Steam/QC)</strong></td>
+          <td>F3-A1</td>
+          <td><span class="pill-tag">V</span></td>
+          <td><span class="pill-tag">V</span></td>
+          <td><span class="pill-tag">V, U</span></td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><strong>Input HPP Flat & Distribusi</strong></td>
+          <td>F4-A1</td>
+          <td><span class="pill-tag">V, U</span></td>
+          <td><span class="pill-tag">V, C, U</span></td>
+          <td><span class="pill-tag">V</span></td>
+          <td><span class="pill-tag">V (Terima)</span></td>
+          <td><span class="pill-tag">V, U</span></td>
+        </tr>
+        <tr>
+          <td><strong>Kasir Penjualan Retail & Grosir</strong></td>
+          <td>F5-A1</td>
+          <td><span class="pill-tag">V, DL</span></td>
+          <td>-</td>
+          <td>-</td>
+          <td><span class="pill-tag">V, C, P</span></td>
+          <td><span class="pill-tag">V</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mutasi Stok Antar-Toko</strong></td>
+          <td>F6-A1</td>
+          <td><span class="pill-tag">V</span></td>
+          <td>-</td>
+          <td>-</td>
+          <td><span class="pill-tag">V, C, U (App)</span></td>
+          <td><span class="pill-tag">V (Jurnal)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Jurnal, Kas & Laba-Rugi Otomatis</strong></td>
+          <td>F7-A1</td>
+          <td><span class="pill-tag">V, DL</span></td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td><span class="pill-tag">V, C, U, DL</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CHECKLIST ACTION ITEMS / TBD UNTUK FOLLOW-UP KE TIM -->
+  <div class="card" style="border: 2px solid #3b82f6;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <h2><i class="fa-solid fa-clipboard-list text-blue-600"></i> 4. Checklist Kebutuhan yang Belum Ada (Action Items untuk Follow-up Tim)</h2>
+      <span class="badge badge-warning">Siap untuk Follow-up</span>
+    </div>
+    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+      Bagian ini berisi daftar parameter data dan aturan bisnis yang sengaja dikosongkan untuk difollow-up ke tim operasional dan Pak Abrar sebelum desain skema data dikunci:
+    </p>
+
+    <div class="checklist-container">
+
+      <!-- Item 1 -->
+      <div class="check-card danger">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-triangle-exclamation text-red-500"></i> 1. Definisi Baku Supplier (Slide 4 & 17)</div>
+          <span class="badge badge-danger">Prioritas Tinggi</span>
+        </div>
+        <div class="check-desc">Saat ini terdapat 3 kemungkinan makna supplier dalam operasional Pak Abrar:</div>
+        <div class="check-action-box">
+          <label style="display: block; margin-bottom: 6px;"><input type="radio" name="supplier_def" /> <strong>Opsi A:</strong> Vendor murni penyedia bahan baku eksternal (kain, kancing, benang) dan supplier barang jadi.</label>
+          <label style="display: block; margin-bottom: 6px;"><input type="radio" name="supplier_def" /> <strong>Opsi B:</strong> Termasuk pemilik barang konsinyasi / titipan di toko.</label>
+          <label style="display: block;"><input type="radio" name="supplier_def" /> <strong>Opsi C:</strong> Termasuk mitra pemberi order jahit / maklon (referral).</label>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="check-card danger">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-industry text-red-500"></i> 2. Format Data Kapasitas Konveksi (Slide 4 & 17)</div>
+          <span class="badge badge-danger">Prioritas Tinggi</span>
+        </div>
+        <div class="check-desc">Tim teknis belum mengetahui struktur kuantitas kapasitas konveksi rekanan Pak Abrar:</div>
+        <div class="check-action-box">
+          <div style="margin-bottom: 8px;">• Satuan kapasitas yang digunakan: <code>[ Pcs / Hari ]</code> atau <code>[ Lusin / Minggu ]</code> atau <code>[ Koli / Bulan ]</code>?</div>
+          <div>• Apakah ada batasan kuantitas minimum order (MOQ) per surat perintah kerja (SPK)?</div>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="check-card warning">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-warehouse text-amber-500"></i> 3. Identitas & Jumlah Lokasi Gudang (Slide 4 & 17)</div>
+          <span class="badge badge-warning">Prioritas Menengah</span>
+        </div>
+        <div class="check-desc">Konfirmasi jumlah gudang fisik aktif saat ini dan rencana ekspansi:</div>
+        <div class="check-action-box">
+          <label style="display: block; margin-bottom: 6px;"><input type="radio" name="warehouse_type" /> <strong>Gudang Tunggal:</strong> Hanya ada 1 gudang pusat untuk bahan dan barang jadi.</label>
+          <label style="display: block;"><input type="radio" name="warehouse_type" /> <strong>Multi-Gudang:</strong> Ada gudang transit / gudang bahan mentah yang terpisah dari gudang barang jadi.</label>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="check-card warning">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-tag text-amber-500"></i> 4. Penamaan Produk di Toko vs Master Artikel (Slide 4 & 17)</div>
+          <span class="badge badge-warning">Prioritas Menengah</span>
+        </div>
+        <div class="check-desc">Aturan display nama barang pada struk kasir dan display toko:</div>
+        <div class="check-action-box">
+          <div>• Apakah nama produk di struk kasir harus <strong>sama persis</strong> dengan nama artikel master gudang, atau toko diperbolehkan memiliki <strong>nama alias / display kustom</strong>?</div>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="check-card warning">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-calculator text-amber-500"></i> 5. Mekanisme & Komponen Input HPP Flat (Slide 2 & 12)</div>
+          <span class="badge badge-warning">Prioritas Menengah</span>
+        </div>
+        <div class="check-desc">Proses penetapan nilai HPP flat sebelum barang didistribusikan:</div>
+        <div class="check-action-box">
+          <div>• Apakah nilai HPP flat diinput <strong>angka bulat manual</strong> oleh Finance/Gudang, atau sistem perlu menyediakan formula kalkulator pembantu <code>(Harga Bahan Baku + Ongkos Konveksi) / Total Pcs</code>?</div>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="check-card success">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-book text-emerald-600"></i> 6. Chart of Accounts (COA) / Modul Akuntansi (Slide 4 & 14)</div>
+          <span class="badge badge-success">Teknis Finance</span>
+        </div>
+        <div class="check-desc">Pencatatan saat ini masih manual di Excel dan akan direframe menjadi modul Jurnal/Accounting otomatis:</div>
+        <div class="check-action-box">
+          <div>• Perlu lampiran daftar rekening bank operasional, kategori akun pengeluaran toko, dan kode akun aktiva/pasiva standar yang biasa digunakan tim Finance Pak Abrar.</div>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="check-card success">
+        <div class="check-header">
+          <div class="check-title"><i class="fa-solid fa-calendar-xmark text-emerald-600"></i> 7. Tanggal Target Cut-off & Penyelesaian PO Aktif (Slide 16 & 18)</div>
+          <span class="badge badge-success">Rencana Migrasi</span>
+        </div>
+        <div class="check-desc">Seluruh PO aktif lama wajib diselesaikan sebelum migrasi bersih:</div>
+        <div class="check-action-box">
+          <div>• Target tanggal cutoff sistem lama: <code>[ .... / .... / 2026 ]</code></div>
+          <div>• Jadwal stock opname massal serentak untuk menentukan saldo persediaan awal di sistem baru.</div>
+        </div>
+        <div class="check-footer">
+          <div>PIC Follow-up: <span class="fill-box">................................</span></div>
+          <div>Target Jawaban: <span class="fill-box">.... / .... / 2026</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong><i class="fa-solid fa-circle-info"></i> Langkah Berikutnya:</strong> Dokumen ini dapat dibagikan kepada tim internal atau Pak Abrar untuk mengisi bagian yang masih kosong. Setelah poin-poin checklist terisi, skema tabel database dan spesifikasi API akan langsung difinalisasi.
+  </div>
+
+</div>
+
+</body>
+</html>
