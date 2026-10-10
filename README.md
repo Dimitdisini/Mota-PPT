@@ -45,6 +45,19 @@ Dokumen presentasi (`.html`) dibuat secara mandiri (*standalone*) menggunakan Ta
 
 ---
 
+## 🌐 Deployment Vercel & URL Routing
+
+Repositori ini telah dikonfigurasi dengan file `vercel.json` untuk *instant zero-config deployment*. Saat di-import ke Vercel:
+
+* **Halaman Utama (`/`):** Langsung membuka **`Penawaran_Mota_PPT.html`** (Slide Deck Anti-Slop).
+* **Rute Pendukung (Clean URLs):**
+  - `/ppt` &rarr; Slide Deck Editorial (`Penawaran_Mota_PPT.html`)
+  - `/v1` &rarr; Proposal Web v1 (`Penawaran_Mota_v1.html`)
+  - `/prd` &rarr; Dokumen PRD Interaktif (`PRD_ERP_PAK_ABRAR.html`)
+  - `/handover` &rarr; Handover Presentation (`mota_handover_presentation.html`)
+
+---
+
 ## 🔒 Hak Cipta & Kerahasiaan
 
 Seluruh materi, kode, rancangan basis data, dan estimasi biaya dalam repositori ini bersifat rahasia (*confidential*) dan disusun khusus oleh **Xavortree Technology Partner** untuk kepentingan pengembangan sistem **MotaApp Indonesia**.
