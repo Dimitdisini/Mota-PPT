@@ -1242,57 +1242,119 @@
         </div>
 
         <div class="grid grid-cols-2 gap-5 my-auto">
-          <!-- Total Price Card -->
-          <div class="editorial-card p-5 border-l-4 border-l-amber-600">
-            <div class="text-[11px] text-amber-800 font-bold uppercase tracking-wider mb-1 font-mono">NILAI KONTRAK DEVELOPMENT TURNKEY</div>
-            <div class="text-4xl font-black text-stone-900 font-mono mb-2">Rp 49.000.000</div>
-            <div class="text-xs text-stone-500 pb-3 border-b border-stone-200 mb-3">
-              Estimasi PPN 11% (jika dibutuhkan Faktur Pajak): <strong>Rp 5.390.000</strong> &bull; Total Inc. Tax: <span class="text-stone-900 font-mono font-bold">Rp 54.390.000</span>
+          <!-- Total Price Card & Breakdown -->
+          <div class="editorial-card p-5 border-l-4 border-l-amber-600 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] text-amber-800 font-bold uppercase tracking-wider mb-1 font-mono">REKAPITULASI INVESTASI DEVELOPMENT</div>
+              
+              <!-- Ringkasan Total Sesuai Format Finansial -->
+              <div class="bg-stone-50 rounded-lg p-3 border border-stone-200 mb-3">
+                <table class="w-full text-xs font-mono">
+                  <thead>
+                    <tr class="text-[10px] text-stone-500 uppercase border-b border-stone-200">
+                      <th class="text-left pb-1">Komponen</th>
+                      <th class="text-right pb-1">Total (IDR)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-stone-100 text-stone-800">
+                    <tr>
+                      <td class="py-1.5 font-bold text-stone-900">Base Project Value</td>
+                      <td class="py-1.5 font-bold text-stone-900 text-right">49,000,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="py-1.5 font-bold text-amber-900">Total Fee + Tax (PPN 11%)</td>
+                      <td class="py-1.5 font-bold text-amber-900 text-right">54,390,000.00</td>
+                    </tr>
+                    <tr class="bg-emerald-50/70 text-emerald-900">
+                      <td class="py-1.5 px-1 font-bold">Total OPEX (24 Bulan)</td>
+                      <td class="py-1.5 px-1 font-bold text-right">4,200,000.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Rincian 4 Komponen Base Value -->
+              <div class="text-[10px] text-stone-500 uppercase font-mono font-bold mb-1.5">Rincian Mandays Base Project:</div>
+              <div class="space-y-1.5 text-xs font-mono text-stone-700">
+                <div class="flex justify-between">
+                  <span>Project Manager & Lead (120 MD @ Rp 150rb):</span>
+                  <span class="font-bold text-stone-900">Rp 18.000.000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Technical Lead/Dev (120 MD @ Rp 150rb):</span>
+                  <span class="font-bold text-stone-900">Rp 18.000.000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Server & Database Setup Fee (1x Inisiasi):</span>
+                  <span class="font-bold text-stone-900">Rp 1.000.000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Service Fee (QA, Hardening & UAT):</span>
+                  <span class="font-bold text-stone-900">Rp 12.000.000</span>
+                </div>
+              </div>
             </div>
 
-            <div class="space-y-2 text-xs font-mono text-stone-700">
-              <div class="flex justify-between">
-                <span>Project Manager & Lead (120 MD @ Rp 150rb):</span>
-                <span class="font-bold text-stone-900">Rp 18.000.000</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Technical Lead/Dev (120 MD @ Rp 150rb):</span>
-                <span class="font-bold text-stone-900">Rp 18.000.000</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Server & Database Setup Fee (1x):</span>
-                <span class="font-bold text-stone-900">Rp 1.000.000</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Service Fee (QA, Hardening & UAT):</span>
-                <span class="font-bold text-stone-900">Rp 12.000.000</span>
-              </div>
-              <div class="flex justify-between pt-2 border-t border-stone-200 text-sm font-bold text-amber-900">
-                <span>TOTAL BASE PROJECT VALUE:</span>
-                <span>Rp 49.000.000</span>
-              </div>
+            <div class="pt-2 border-t border-stone-200 flex justify-between text-xs font-bold font-mono text-amber-900 mt-2">
+              <span>TOTAL BASE PROJECT VALUE:</span>
+              <span>Rp 49.000.000,00</span>
             </div>
           </div>
 
-          <!-- Perbandingan Vendor -->
-          <div class="editorial-card-subtle p-5 border-stone-300 flex flex-col justify-between">
+          <!-- OPEX Card & Perbandingan Vendor -->
+          <div class="editorial-card p-5 border-l-4 border-l-emerald-600 flex flex-col justify-between">
             <div>
-              <div class="text-xs font-bold text-stone-900 uppercase font-mono mb-2">PERBANDINGAN PASAR ENTERPRISE</div>
-              <div class="text-xs text-stone-700 space-y-2.5 leading-relaxed">
-                <div class="p-2.5 rounded bg-white border border-stone-200">
-                  <div class="text-stone-500 font-semibold">Vendor Besar / Enterprise Agency:</div>
-                  <div class="text-stone-900 font-bold font-mono text-sm">Rp 100.000.000+ s/d Rp 150.000.000</div>
-                  <div class="text-[11px] text-stone-400">Untuk pengerjaan custom ERP 6 bulan ujung-ke-ujung.</div>
+              <div class="flex items-center justify-between mb-2">
+                <div class="text-[11px] text-emerald-800 font-bold uppercase tracking-wider font-mono">
+                  <i class="fa-solid fa-server mr-1"></i> BIAYA OPERASIONAL CLOUD (OPEX)
                 </div>
-                <div class="p-2.5 rounded bg-amber-50 border border-amber-200">
-                  <div class="text-amber-800 font-semibold">Best Price Kemitraan Xavortree:</div>
-                  <div class="text-amber-900 font-bold font-mono text-sm">Rp 49.000.000 (Hemat ~50-60%)</div>
-                  <div class="text-[11px] text-amber-700">Harga khusus kemitraan strategis jangka panjang Pak Abrar.</div>
+                <span class="spec-tag forest text-[10px]">Periode 24 Bulan</span>
+              </div>
+              
+              <div class="text-[11px] text-stone-600 mb-2.5 leading-relaxed">
+                Biaya langganan infrastruktur cloud terisolasi untuk memastikan kelancaran transaksi kasir & operasional konveksi:
+              </div>
+
+              <!-- Tabel OPEX Sesuai Formula Klien -->
+              <div class="bg-stone-50 rounded-lg p-3 border border-stone-200 mb-3">
+                <table class="w-full text-xs font-mono">
+                  <thead>
+                    <tr class="text-[10px] text-stone-500 uppercase border-b border-stone-200">
+                      <th class="text-left pb-1">Item</th>
+                      <th class="text-left pb-1">Tipe Biaya</th>
+                      <th class="text-center pb-1">Siklus</th>
+                      <th class="text-right pb-1">Monthly (IDR)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-stone-100 text-stone-800">
+                    <tr>
+                      <td class="py-2 font-bold text-stone-900">Server Fee</td>
+                      <td class="py-2 text-[11px] text-stone-600">Subscription Fee (+Tax)</td>
+                      <td class="py-2 text-center"><span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">Monthly</span></td>
+                      <td class="py-2 font-bold text-right">175,000.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="mt-2.5 pt-2 border-t border-stone-200 flex items-center justify-between text-xs font-mono font-bold">
+                  <span class="text-stone-700">Total Fee (Selama 24 Bulan):</span>
+                  <span class="text-emerald-800 text-sm font-black">Rp 4,200,000.00</span>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded bg-amber-50 border border-amber-200 text-xs">
+                <div class="text-amber-900 font-bold mb-0.5 flex items-center gap-1.5">
+                  <i class="fa-solid fa-handshake"></i>
+                  <span>Perbandingan Pasar Enterprise:</span>
+                </div>
+                <div class="text-[11px] text-amber-800 leading-snug">
+                  Vendor besar umumnya mematok <strong>Rp 100jt – Rp 150jt</strong> untuk custom ERP sejenis. Kemitraan strategis Xavortree menghemat ~50-60% dengan performa optimal.
                 </div>
               </div>
             </div>
-            <div class="text-[11px] text-stone-500 pt-2 border-t border-stone-200 font-mono">
-              <i class="fa-solid fa-server text-stone-700 mr-1"></i> <strong>Sewa Cloud Server VPS:</strong> Rp 175.000/bulan (Total Rp 4.200.000 untuk 24 bulan).
+
+            <div class="text-[11px] text-stone-500 pt-2 border-t border-stone-200 font-mono flex items-center justify-between">
+              <span>Status Server: Cloud VPS + Managed DB</span>
+              <span class="text-emerald-700 font-bold">Rp 175.000 / bln</span>
             </div>
           </div>
         </div>

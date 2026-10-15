@@ -241,7 +241,29 @@ gantt
 
 ## 6. STRUKTUR INVESTASI BIAYA & SKEMA TERMIN
 
-### 6.1 Rincian Alokasi Anggaran (Sesuai MOTA - Pricelist Details)
+### 6.1 Ringkasan Total Anggaran & Investasi
+
+| Kategori | Komponen | Total (IDR) | Keterangan |
+| :---: | :--- | :---: | :--- |
+| **INVESTASI INTI** | **Base Project Value** | **Rp 49.000.000,00** | Turnkey Development 120 Mandays (All-In) |
+| **PAJAK RESMI** | **Total Fee + Tax (PPN 11%)** | **Rp 54.390.000,00** | Termasuk Faktur Pajak resmi (PPN Rp 5.390.000,00) |
+| **OPEX CLOUD** | **Total OPEX (24 Bulan)** | **Rp 4.200.000,00** | Alokasi Server & Database Cloud selama 24 bulan penuh |
+
+---
+
+### 6.2 Rincian Biaya Operasional Cloud (OPEX 24 Bulan)
+
+Untuk menjamin uptime server transaksi kasir dan sinkronisasi konveksi toko Tanah Abang berjalan tanpa interupsi infrastruktur:
+
+| Item | Tipe Layanan | Siklus Penagihan | Biaya Bulanan (IDR) | Total Fee (24 Bulan) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Server Fee** | **Subscription Fee (+Tax)** | **Monthly** | **Rp 175.000,00** | **Rp 4.200.000,00** |
+
+*Catatan OPEX:* Dialokasikan untuk sewa Cloud VPS dedicated + Managed Database PostgreSQL/MySQL berkinerja tinggi beserta auto-backup berkala selama 2 tahun penuh.
+
+---
+
+### 6.3 Rincian Komponen Mandays Base Project Value (Formula Pricelist)
 
 | No | Komponen Pembiayaan | Volume / Mandays | Rate Satuan (IDR) | Total Biaya (IDR) |
 | :---: | :--- | :---: | :---: | :---: |
@@ -251,12 +273,9 @@ gantt
 | 4 | **Service Fee (Agile, QA & UAT Hardening)**| 120 Mandays | Rp 100.000 / hari | Rp 12.000.000,00 |
 | **TOTAL** | **NILAI INVESTASI TURNKEY DEVELOPMENT (ALL-IN)** | | | **Rp 49.000.000,00** |
 
-*Catatan Pajak:* Jika dibutuhkan Faktur Pajak resmi perusahaan, estimasi PPN 11% sebesar **Rp 5.390.000,00** (Total Inc. Tax: **Rp 54.390.000,00**).  
-*Biaya Operasional Cloud (OPEX):* Biaya sewa Cloud VPS + Managed Database sebesar **Rp 175.000,00 / bulan** (dapat dibayarkan mandiri atau dialokasikan Rp 4.200.000 untuk 24 bulan penuh).
-
 ---
 
-### 6.2 Skema 5 Termin Pembayaran Ramah Arus Kas (BAST-Driven)
+### 6.4 Skema 5 Termin Pembayaran Ramah Arus Kas (BAST-Driven)
 Untuk menjamin arus kas operasional toko Pak Abrar tetap aman dan lancar selama masa pembangunan sistem:
 
 ```mermaid

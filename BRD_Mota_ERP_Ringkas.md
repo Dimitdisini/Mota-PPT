@@ -96,8 +96,20 @@ flowchart LR
 
 ## 6. ANGGARAN TURNKEY & 5 TERMIN RAMAH ARUS KAS
 
-### Total Nilai Proyek: **Rp 49.000.000,00 All-In**
-*(Estimasi PPN 11% jika dibutuhkan Faktur Pajak: Rp 5.390.000 $\rightarrow$ Total Inc. Tax: Rp 54.390.000)*
+### Ringkasan Total Anggaran & Investasi
+
+| Kategori | Komponen | Total (IDR) |
+| :--- | :--- | :---: |
+| **Base Project Value** | Turnkey Development 120 Mandays (All-In) | **49,000,000.00** |
+| **Total Fee + Tax** | Termasuk Faktur Pajak Resmi (PPN 11%) | **54,390,000.00** |
+| **Total OPEX (24 Bulan)** | Alokasi Cloud VPS & Managed Database | **4,200,000.00** |
+
+#### Rincian Biaya Operasional Cloud (OPEX)
+| Item | Tipe Layanan | Siklus | Monthly (IDR) | Total Fee (24 Bulan) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Server Fee** | **Subscription Fee (+Tax)** | **Monthly** | **175,000.00** | **4,200,000.00** |
+
+---
 
 ```mermaid
 flowchart LR
